@@ -1,2 +1,2 @@
-# personalProjects
-This repo is used to maintain my personal projects
+# personalProtfolio
+This repo is used to maintain my personal protfolio and its grwoth over time.
