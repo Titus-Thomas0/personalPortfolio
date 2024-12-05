@@ -8,10 +8,9 @@
 
 /*==========Menu Icon styles==========*/
 #menuIcon {
-    width: 60px;
-    height: 45px;
+    width: 24px;
+    height: 24px;
     position: relative;
-    margin: 50px auto;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -23,10 +22,11 @@
     cursor: pointer;
 }
 
+/*==========Menu Icon => Span styles==========*/
 #menuIcon span {
     display: block;
     position: absolute;
-    height: 9px;
+    height: 3px;
     width: 100%;
     background: #d3531a;
     border-radius: 9px;
@@ -42,33 +42,39 @@
     transition: .25s ease-in-out;
 }
 
+/*==========Menu Icon => Span child 1 position styles==========*/
 #menuIcon span:nth-child(1) {
     top: 0px;
 }
 
+/*==========Menu Icon => Span child 2 position styles==========*/
 #menuIcon span:nth-child(2) {
-    top:18px;
+    top: 10px;
 }
 
+/*==========Menu Icon => Span child 3 position styles==========*/
 #menuIcon span:nth-child(3) {
-    top: 36px;
+    top: 20px;
 }
 
+/*==========Menu Icon Span open class for child 1 transform styles==========*/
 #menuIcon.open span:nth-child(1) {
-    top: 18px;
+    top: 10px;
     -webkit-transform: rotate(135deg);
     -moz-transform: rotate(135deg);
     -o-transform: rotate(135deg);
     transform: rotate(135deg);
 }
 
+/*==========Menu Icon Span open class for child 2 transform styles==========*/
 #menuIcon.open span:nth-child(2) {
     opacity: 0;
     left: -60px;
 }
 
+/*==========Menu Icon Span open class for child 3 transform styles==========*/
 #menuIcon.open span:nth-child(3) {
-    top: 18px;
+    top: 10px;
     -webkit-transform: rotate(-135deg);
     -moz-transform: rotate(-135deg);
     -o-transform: rotate(-135deg);
