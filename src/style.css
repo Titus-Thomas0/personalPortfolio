@@ -1,9 +1,18 @@
 /*Style to apply for Titus Thomas Personal Portfolio*/
 
-/*==========Universal HTML Elements styles==========*/
+/*==========Universal HTML elements styles==========*/
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Quantico", sans-serif;
+}
+
+/*==========Body elements styles==========*/
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #67C7EB;
 }
 
 /*==========Menu Icon styles==========*/
@@ -20,6 +29,7 @@
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
     cursor: pointer;
+    display: none;
 }
 
 /*==========Menu Icon => Span styles==========*/
@@ -28,7 +38,7 @@
     position: absolute;
     height: 3px;
     width: 100%;
-    background: #d3531a;
+    background: #6A0C0B;
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -44,7 +54,7 @@
 
 /*==========Menu Icon => Span child 1 position styles==========*/
 #menuIcon span:nth-child(1) {
-    top: 0px;
+    top: 2px;
 }
 
 /*==========Menu Icon => Span child 2 position styles==========*/
@@ -54,7 +64,7 @@
 
 /*==========Menu Icon => Span child 3 position styles==========*/
 #menuIcon span:nth-child(3) {
-    top: 20px;
+    top: 18px;
 }
 
 /*==========Menu Icon Span open class for child 1 transform styles==========*/
@@ -79,4 +89,94 @@
     -moz-transform: rotate(-135deg);
     -o-transform: rotate(-135deg);
     transform: rotate(-135deg);
+}
+
+/*==========Logo elements styles==========*/
+#logo {
+    display: inline-flex;
+    cursor: pointer;
+    padding-top: 5px;
+}
+
+#logo img {
+    height: 24px;
+    width: 24px;
+}
+
+#logo a {
+    color: #aa0505;
+    text-decoration: none;
+    padding-left: 2px;
+    padding-top: 2px;
+}
+
+/*==========Nav elements styles==========*/
+nav {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 35px;
+    width: 100%;
+    background-color: #B97D10;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    display: block;
+    list-style-type: none;
+    cursor: pointer;
+    padding: 5px 0px;
+}
+
+nav ul li a {
+    padding: 7px 10px;
+    text-decoration: none;
+    color: #aa0505;
+}
+
+nav ul li a:hover {
+    background-color: #6A0C0B;
+    color: #FBCA03;
+}
+
+@media (max-width:600px) {
+    nav {
+        justify-content: left;
+    }
+    nav ul {
+        position: absolute;
+        top: 35px;
+        left: 0px;
+        right: 0px;
+        flex-direction: column;
+        text-align: center;
+        background: #B97D10;
+        gap: 0;
+        overflow: hidden;
+    }
+
+    nav ul li a {
+        padding: 10px 300px;
+    }
+
+    #menuIcon {
+        display: inline-flex;
+    }
+
+    #logo {
+        padding-left: 25px;
+    }
+
+    #navItem {
+        transition: all 0.5s;
+    }
 }
