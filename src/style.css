@@ -8,6 +8,10 @@
     font-family: "Quantico", sans-serif;
 }
 
+::before, ::after {
+    box-sizing: inherit;
+}
+
 /*==========Body elements styles==========*/
 body {
     width: 100%;
@@ -38,7 +42,7 @@ body {
     position: absolute;
     height: 3px;
     width: 100%;
-    background: #6A0C0B;
+    background: #580c1f;
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -93,34 +97,36 @@ body {
 
 /*==========Logo elements styles==========*/
 #logo {
-    display: inline-flex;
+    float: left;
+    position: relative;
     cursor: pointer;
-    padding-top: 5px;
-}
-
-#logo img {
-    height: 24px;
-    width: 24px;
 }
 
 #logo a {
-    color: #aa0505;
-    text-decoration: none;
-    padding-left: 2px;
-    padding-top: 2px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: transparent;
+    width: 140px;
+    height: 40px;
+    background: url(assets/images/Logo.png) no-repeat center;
+    background-size: 140px 40px;
 }
 
 /*==========Nav elements styles==========*/
 nav {
-    padding: 10px 30px;
+    padding: 10px 0px 10px 30px;
+    padding: 0px 0px 0px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
-    height: 35px;
+    position: fixed;
+    height: 60px;
     width: 100%;
-    background-color: #B97D10;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    background-color: #000000;
+    box-shadow: 3px 3px 5px rgba(88, 12, 31, 0.5);
+    z-index: 999;
 }
 
 nav ul {
@@ -138,14 +144,50 @@ nav ul li {
 }
 
 nav ul li a {
-    padding: 7px 10px;
+    padding: 17px 25px;
     text-decoration: none;
-    color: #aa0505;
+    color: #580C1F;
+    font-size: large;
 }
 
 nav ul li a:hover {
-    background-color: #6A0C0B;
-    color: #FBCA03;
+    background-color: #580C1F;
+    color: #000000;
+}
+
+.page {
+    height: 100vh;
+    width: 100%;
+}
+
+#Home {
+    position: relative;
+    background-image: url(assets/images/Home\ BG.jpg);
+    background-attachment: fixed;
+    background-color: #000000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#Home div {
+    position: absolute;
+    text-align: center;
+    padding: 20px 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.486);
+    color: #580c1f;
+    font-size: 25px;
+}
+
+#Home h4 {
+    letter-spacing: 10px;
+}
+
+#Home h1 {
+    letter-spacing: 10px;
 }
 
 @media (max-width:600px) {
@@ -154,12 +196,12 @@ nav ul li a:hover {
     }
     nav ul {
         position: absolute;
-        top: 35px;
+        top: 65px;
         left: 0px;
         right: 0px;
         flex-direction: column;
         text-align: center;
-        background: #B97D10;
+        background: #000000;
         gap: 0;
         overflow: hidden;
     }
