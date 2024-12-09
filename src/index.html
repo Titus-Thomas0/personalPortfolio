@@ -5,28 +5,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Linked the font file here-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--Linked the font file here-->
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> <!--Linked the font file here-->
     <title>Titus Thomas</title>
     <link rel="stylesheet" href="style.css"> <!--Linked the style.css file here-->
 </head>
 <body>
     <!--==========Header==========-->
     <Header id="navigationBar">
-    <!--==========Navigation Bar==========-->
+        <!--==========Navigation Bar==========-->
         <nav>
-    <!--==========Menu Icon==========-->
-            <div id="menuIcon">
-                <span></span>
-                <span></span>
-                <span></span>
+            <!--==========Menu Icon==========-->
+            <div id="menuIcon"> <!--This div is used to create a menu icon using css-->
+                <span></span> <!--child-1-->
+                <span></span> <!--child-2-->
+                <span></span> <!--child-3-->
             </div>
-    <!--==========Webpage Logo==========-->
+            <!--==========Webpage Logo==========-->
             <div id="logo">
-                <a id="logoText" href="index.html">TITUS THOMAS</a>
+                <a id="logoText" href="index.html">TITUS THOMAS</a> <!--logo text is added here-->
             </div>
-    <!--==========Navigation Items==========-->
+            <!--==========Navigation Items==========-->
             <ul id="navItem">
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#About me">About me</a></li>
@@ -37,34 +37,57 @@
             </ul>
         </nav>
     </Header>
+
+    <!--==========main==========-->
     <main>
+        <!--==========section-1 Home==========-->
         <section id="Home" class="page">
-            <div>
-                <h4 id="greetings"></h4>
-                <audio autoplay>
+            <!--==========My intro to this world==========-->
+            <div id="intro">
+                <h4 id="greetings"></h4> <!--==========Welcome note to visitors==========-->
+                <audio autoplay> <!--==========Audio used for the welcome note==========-->
                     <source src="assets/soundEffects/Keyboard Typing.mp3" type="audio/mpeg">
                 </audio>
-                <h1>I am Titus Thomas</h1>
-                <span>LabVIEW Developer</span>
-                <span>Fullstack Developer</span>
+                <h1>I am Titus Thomas</h1> <!--==========My Name==========-->
+                <span>LabVIEW Developer</span> <!--==========My Position==========-->
+                <span>Fullstack Developer</span> <!--==========My Position==========-->
+            </div>
+
+            <!--==========My socials link==========-->
+            <div id="socials">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/titus-thomas-61a909149/" target="_blank">Linkedin</a></li> <!--==========Linkedin link==========-->
+                    <li><a href="https://github.com/Titus-Thomas0" target="_blank">Github</a></li> <!--==========Github link==========-->
+                    <li><a href="https://www.credly.com/users/titus-thomas.02668ef2" target="_blank">Credly</a></li> <!--==========Credly link==========-->
+                </ul>
             </div>
         </section>
+
+        <!--==========section-2 About me==========-->
         <section id="About me" class="page">
             <h2>About</h2>
             <p>-----Type here-----</p>
         </section>
+
+        <!--==========section-3 Resume==========-->
         <section id="Resume" class="page">
             <h2>Resume</h2>
             <p>-----Type here-----</p>
         </section>
+
+        <!--==========section-4 Project==========-->
         <section id="Project" class="page">
             <h2>Project</h2>
             <p>-----Type here-----</p>
         </section>
+
+        <!--==========section-5 Certificates==========-->
         <section id="Certificates" class="page">
             <h2>Certificates</h2>
             <p>-----Type here-----</p>
         </section>
+
+        <!--==========section-5 Contacts==========-->
         <section id="Contact" class="page">
             <h2>Contact</h2>
             <p>-----Type here-----</p>

@@ -8,10 +8,6 @@
     font-family: "Quantico", sans-serif;
 }
 
-::before, ::after {
-    box-sizing: inherit;
-}
-
 /*==========Body elements styles==========*/
 body {
     width: 100%;
@@ -161,7 +157,7 @@ nav ul li a:hover {
 }
 
 #Home {
-    position: relative;
+    position: absolute;
     background-image: url(assets/images/Home\ BG.jpg);
     background-attachment: fixed;
     background-color: #000000;
@@ -170,7 +166,7 @@ nav ul li a:hover {
     background-size: 100%;
 }
 
-#Home div {
+#Home #intro {
     position: absolute;
     text-align: center;
     padding: 20px 20px;
@@ -189,6 +185,38 @@ nav ul li a:hover {
 #Home h1 {
     letter-spacing: 10px;
 }
+
+#Home span {
+    display: inline-block;
+
+}
+
+#socials {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#socials ul {
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#socials li {
+    display: block;
+    list-style-type: none;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+
 
 @media (max-width:600px) {
     nav {
