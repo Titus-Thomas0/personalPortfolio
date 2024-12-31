@@ -10,9 +10,8 @@
 
 /*==========Body elements styles==========*/
 body {
-    width: 100%;
-    height: 100%;
-    background-color: #67C7EB;
+    width: screen;
+    height: screen;
 }
 
 /*==========Menu Icon styles==========*/
@@ -92,22 +91,12 @@ body {
 }
 
 /*==========Logo elements styles==========*/
-#logo {
-    float: left;
-    position: relative;
-    cursor: pointer;
-}
-
 #logo a {
-    display: block;
     margin: 0;
     padding: 0;
     border: none;
-    color: transparent;
-    width: 140px;
-    height: 40px;
-    background: url(assets/images/Logo.png) no-repeat center;
-    background-size: 140px 40px;
+    text-decoration: none;
+    color: #b4121b;
 }
 
 /*==========Nav elements styles==========*/
@@ -120,8 +109,8 @@ nav {
     position: fixed;
     height: 60px;
     width: 100%;
-    background-color: #000000;
-    box-shadow: 3px 3px 5px rgba(88, 12, 31, 0.5);
+    background-color: #00000080;
+    box-shadow: 0px 0px 10px rgba(180, 18, 27, 1);
     z-index: 999;
 }
 
@@ -142,13 +131,12 @@ nav ul li {
 nav ul li a {
     padding: 17px 25px;
     text-decoration: none;
-    color: #580C1F;
+    color: whitesmoke;
     font-size: large;
 }
 
 nav ul li a:hover {
-    background-color: #580C1F;
-    color: #000000;
+    color: #b4121b;
 }
 
 .page {
@@ -157,10 +145,9 @@ nav ul li a:hover {
 }
 
 #Home {
-    position: absolute;
-    background-image: url(assets/images/Home\ BG.jpg);
+    position: relative;
+    background: url(assets/images/Background\ Image.jpg);
     background-attachment: fixed;
-    background-color: #000000;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -173,8 +160,8 @@ nav ul li a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(128, 128, 128, 0.486);
-    color: #580c1f;
+    background-color: #000000bb;
+    color: #b4121b;
     font-size: 25px;
 }
 
@@ -193,7 +180,7 @@ nav ul li a:hover {
 
 #socials {
     position: absolute;
-    top: 80%;
+    top: 95%;
     left: 50%;
     transform: translate(-50%, -80%);
     padding: 10px 10px;
@@ -213,10 +200,63 @@ nav ul li a:hover {
     display: block;
     list-style-type: none;
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 5px 20px;
 }
 
+#socials ul li a::before {
+    content: attr(data-socials);
+    position: absolute;
+    background-color: var(--accent-color);
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 100px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transform: translateY(-65px) translateX(-20px);
+}
 
+.icon {
+    height: 50px;
+    width: 50px;
+}
+
+.icon:hover {
+    height: 60px;
+    width: 60px;
+    transition: 200ms ease;
+}
+
+#linkedin, #github{
+    background: #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255, 1);
+}
+
+#linkedin:hover {
+    background: #007ab9;
+    box-shadow: 0px 0px 10px rgba(0, 122, 185, 1);
+}
+
+#github:hover {
+    background: #444444;
+    box-shadow: 0px 0px 10px rgba(68, 68, 68, 5);
+}
+
+#credly, #codedex{
+    background: #000000;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+}
+
+#credly:hover {
+    background: #3b9e62;
+    box-shadow: 0px 0px 10px rgba(59, 158, 98, 5);
+}
+
+#codedex:hover {
+    background: none;
+    box-shadow: none;
+}
 
 @media (max-width:600px) {
     nav {
