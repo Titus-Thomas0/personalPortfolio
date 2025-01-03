@@ -97,6 +97,18 @@ body {
     border: none;
     text-decoration: none;
     color: #b4121b;
+    display: inline-flex;
+}
+
+#logo span {
+    color: #FFFFFF;
+}
+
+#logo a:hover {
+    color: #FFFFFF;
+    span {
+        color: #b4121b;
+    }
 }
 
 /*==========Nav elements styles==========*/
@@ -110,10 +122,11 @@ nav {
     height: 60px;
     width: 100%;
     background-color: #00000080;
-    box-shadow: 0px 0px 10px rgba(180, 18, 27, 1);
+    border-bottom: 2px solid grey;
     z-index: 999;
 }
 
+/*==========Nav ul elements styles==========*/
 nav ul {
     float: right;
     display: flex;
@@ -121,6 +134,7 @@ nav ul {
     justify-content: flex-end;
 }
 
+/*==========Nav ul li elements styles==========*/
 nav ul li {
     display: block;
     list-style-type: none;
@@ -128,31 +142,31 @@ nav ul li {
     padding: 5px 0px;
 }
 
-nav ul li a {
+/*==========Nav ul li a elements styles==========*/
+.navList {
     padding: 17px 25px;
     text-decoration: none;
     color: whitesmoke;
     font-size: large;
 }
 
-nav ul li a:hover {
+/*==========Nav ul li a elements on hover styles==========*/
+.navList:hover {
     color: #b4121b;
 }
 
-.page {
-    height: 100vh;
-    width: 100%;
-}
-
+/*==========Home elements styles==========*/
 #Home {
+    height: 100vh;
     position: relative;
-    background: url(assets/images/Background\ Image.jpg);
+    background: url(assets/images/BG.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
+/*==========Home intro elements styles==========*/
 #Home #intro {
     position: absolute;
     text-align: center;
@@ -160,22 +174,34 @@ nav ul li a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #000000bb;
+    background-color: #ffffff15;
     color: #b4121b;
     font-size: 25px;
 }
 
-#Home h4 {
+/*==========Home h1 h4 elements styles==========*/
+#Home h1, h2, h3, h4 {
     letter-spacing: 10px;
 }
 
-#Home h1 {
-    letter-spacing: 10px;
+#Home h1 span {
+    color: #FFFFFF;
 }
 
-#Home span {
+/*==========Styles to create | symbol before first role==========*/
+#Home #Roles span:first-child::before {
+    content: '|';
+    padding: 0 5px 0 0;
     display: inline-block;
+    color: #FFFFFF;
+}
 
+/*==========Styles to create | symbol after every role==========*/
+#Home #Roles span::after {
+    content: '|';
+    padding: 0 0 0 5px;
+    display: inline-block;
+    color: #FFFFFF;
 }
 
 #socials {
@@ -200,30 +226,57 @@ nav ul li a:hover {
     display: block;
     list-style-type: none;
     cursor: pointer;
-    padding: 5px 20px;
+    padding: 5px 15px;
+}
+
+#socials ul li a {
+    border-radius: 50%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
 }
 
 #socials ul li a::before {
-    content: attr(data-socials);
+    content: attr(data-social);
     position: absolute;
     background-color: var(--accent-color);
-    color: whitesmoke;
+    color: #000000;
     text-decoration: none;
     padding: 0.5em 1em;
     border-radius: 100px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-    transform: translateY(-65px) translateX(-20px);
+    transform: translateY(-30px) rotate(25deg);
+    opacity: 0;
+    transition: 200ms cubic-bezier(0.42, 0, 0.44, 1.68);
+}
+
+#socials ul li a::after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid var(--accent-color);
+    transform: translateY(0) rotate(25deg);
+    opacity: 0;
+    transition: 200ms cubic-bezier(0.42, 0, 0.44, 1.68);
+}
+
+#socials ul li a:hover:before{
+    transform: translateY(-65px) rotate(0);
+    opacity: 1;
+}
+
+#socials ul li a:hover::after{
+    transform: translateY(-42px) rotate(0);
+    opacity: 1;
 }
 
 .icon {
     height: 50px;
     width: 50px;
-}
-
-.icon:hover {
-    height: 60px;
-    width: 60px;
-    transition: 200ms ease;
 }
 
 #linkedin, #github{
@@ -254,8 +307,203 @@ nav ul li a:hover {
 }
 
 #codedex:hover {
-    background: none;
-    box-shadow: none;
+    background: #ffee39;
+    box-shadow: 0px 0px 10px rgba(255, 238, 57, 5);
+}
+
+.Content {
+    position: relative;
+    top: 60px;
+}
+
+.Heading {
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+}
+
+.Heading h3 {
+    color: grey;
+}
+
+.Heading h3 span {
+    color: #FFFFFF;
+}
+
+.Subject {
+    margin-top: 60px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#About_me {
+    background: #000103;
+    color: #b4121b;
+    width: 100%;
+    height: 200vh;
+    max-height: max-content;
+}
+
+.Details {
+    display: inline-flex;
+    margin-bottom: 10%;
+}
+
+.Left_Row {
+    display: inline-flex;
+    width: 250%;
+    position: relative;
+    
+}
+
+.Left_Row img{
+    border-radius: 2rem;
+    box-shadow: 0px 0px 15px 1px rgba(255, 255, 255, 1);
+}
+
+.Right_Row {
+    padding: 0 3rem;
+    word-spacing: 5px;
+}
+
+.Right_Row p:nth-child(2) {
+    margin-top: 1rem;
+}
+
+.Right_Row p .tab {
+    display: inline-block;
+    margin-left: 2em;
+}
+
+.Right_Row p {
+    color: whitesmoke;
+}
+
+.Right_Row p span {
+    color: #b4121b;
+}
+
+#Profile {
+    margin-top: 1rem;
+}
+
+#Personal_Details {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Personal_Details ul li {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+#segments {
+    color: grey;
+}
+
+/* #segments li strong::after {
+    content: ': ';
+} */
+
+#values {
+    margin-left: 2rem;
+    color: whitesmoke;
+}
+
+#values li::before {
+    content: ': ';
+    color: grey;
+}
+
+#values a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* #Progress_Bar {
+    margin: 0% 40%;
+} */
+
+#Skills {
+    position: relative;
+    width: 500px;
+}
+
+#Skills h4 {
+    margin-bottom: 1rem;
+}
+
+.Wrapper .Bar {
+    margin: 20px 0;
+}
+
+.Wrapper .Bar .Info {
+    margin-bottom: 10px;
+}
+
+.Wrapper .Bar .Info span {
+    letter-spacing: 1px;
+    color: whitesmoke;
+}
+
+.Wrapper .Bar .Progress_Bar {
+    width: 100%;
+    height: 15px;
+    background-color: grey;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.Wrapper .Bar .Progress_Bar span {
+    position: absolute;
+    height: 100%;
+    border-radius: 10px;
+    width: 70%;
+    transform: scale(0);
+    background-color: #b4121b;
+    animation: Progress_Bar 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.Wrapper .Bar .Progress_Bar span.html {
+    
+}
+
+#Tools {
+    position: relative;
+    width: 500px;
+    margin-left: 10%;
+}
+
+#Tools h4 {
+    margin-bottom: 1rem;
+}
+
+@keyframes Progress_Bar {
+    100% {
+        transform: scale(1);
+    }
+}
+
+#Resume {
+    background: #080808;
+    color: #b4121b;
+}
+
+#Project {
+    background: #111111;
+    color: #b4121b;
+}
+
+#Certificates {
+    background: #84828f;
+    color: #b4121b;
+}
+
+#Connect {
+    background: #d3d5d7;
+    color: #b4121b;
+    text-align: center;
 }
 
 @media (max-width:600px) {

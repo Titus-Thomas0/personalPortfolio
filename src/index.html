@@ -25,16 +25,16 @@
             </div>
             <!--==========Webpage Logo==========-->
             <div id="logo">
-                <a id="logoText" href="index.html"><h1>Titus Thomas</h1></a> <!--logo text is added here-->
+                <a id="logoText" href="index.html"><h1>TITUS THOMAS<span>.</span></h1></a> <!--logo text is added here-->
             </div>
             <!--==========Navigation Items==========-->
             <ul id="navItem">
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#About me">About me</a></li>
-                <li><a href="#Resume">Resume</a></li>
-                <li><a href="#Project">Project</a></li>
-                <li><a href="#Certificates">Certificates</a></li>
-                <li><a href="#Contact">Contact</a></li>
+                <li><a href="" class="navList">Home</a></li>
+                <li><a href="#About_me" class="navList">About me</a></li>
+                <li><a href="#Resume" class="navList">Resume</a></li>
+                <li><a href="#Project" class="navList">Project</a></li>
+                <li><a href="#Certificates" class="navList">Certificates</a></li>
+                <li><a href="#Connect" class="navList">Connect</a></li>
             </ul>
         </nav>
     </Header>
@@ -42,38 +42,40 @@
     <!--==========main==========-->
     <main>
         <!--==========section-1 Home==========-->
-        <section id="Home" class="page">
+        <section id="Home" class="Page">
             <!--==========My intro to this world==========-->
             <div id="intro">
                 <h4 id="greetings"></h4> <!--==========Welcome note to visitors==========-->
                 <audio autoplay> <!--==========Audio used for the welcome note==========-->
                     <source src="assets/soundEffects/Keyboard Typing.mp3" type="audio/mpeg">
                 </audio>
-                <h1>I am Titus Thomas</h1> <!--==========My Name==========-->
-                <span>LabVIEW Developer</span> <!--==========My Position==========-->
-                <span>Fullstack Developer</span> <!--==========My Position==========-->
+                <h1>I am <span>Titus Thomas</span>.</h1> <!--==========My Name==========-->
+                <p id="Roles">
+                    <span>Fullstack Developer</span> <!--==========My Role==========-->
+                    <span>LabVIEW Developer</span> <!--==========My Role==========-->
+                </p>
             </div>
 
             <!--==========My socials link==========-->
             <div id="socials">
                 <ul>
                     <li>
-                        <a data-socials="Linkedin" style="--accent-color: #007ab9" href="https://www.linkedin.com/in/titus-thomas-61a909149/" target="_blank"> <!--==========Linkedin link==========-->
+                        <a data-social="Linkedin" style="--accent-color: #007ab9" href="https://www.linkedin.com/in/titus-thomas-61a909149/" target="_blank"> <!--==========Linkedin link==========-->
                             <img src="assets/images/linkedin.png" alt="Linkedin" id="linkedin" class="icon">
                         </a>
                     </li>
                     <li>
-                        <a data-socials="Github" style="--accent-color: #444444" href="https://github.com/Titus-Thomas0" target="_blank"> <!--==========Github link==========-->
+                        <a data-social="Github" style="--accent-color: #444444" href="https://github.com/Titus-Thomas0" target="_blank"> <!--==========Github link==========-->
                            <img src="assets/images/github.png" alt="Github" id="github" class="icon">
                         </a>
                     </li> 
                     <li>
-                        <a data-socials="Credly" style="--accent-color: #3b9e62" href="https://www.credly.com/users/titus-thomas.02668ef2" target="_blank"> <!--==========Credly link==========-->
+                        <a data-social="Credly" style="--accent-color: #3b9e62" href="https://www.credly.com/users/titus-thomas.02668ef2" target="_blank"> <!--==========Credly link==========-->
                             <img src="assets/images/Credly.png" alt="Credly" id="credly" class="icon">
                         </a>
                     </li>
                     <li>
-                        <a data-socials="Codedex" style="--accent-color: none" href="https://www.codedex.io/@titus-thomas" target="_blank"> <!--==========Codedex link==========-->
+                        <a data-social="Codedex" style="--accent-color: #ffee39" href="https://www.codedex.io/@titus-thomas" target="_blank"> <!--==========Codedex link==========-->
                             <img src="assets/images/codedexlogo.png" alt="Codedex" id="codedex" class="icon">
                         </a>
                     </li>
@@ -82,35 +84,224 @@
         </section>
 
         <!--==========section-2 About me==========-->
-        <section id="About me" class="page">
-            <h2>About me</h2>
-            <p>-----Type here-----</p>
+        <section id="About_me" class="Page">
+            <div class="Content">
+                <div class="Heading">
+                    <h2>ABOUT ME</h2>
+                    <h3>Time for a quick <span>spotlight</span> on me &#128526; !</h3>
+                </div>
+                <div class="Subject">
+                    <div class="Details">
+                        <div class="Left_Row">
+                            <img src="assets/images/logo1.jpg" alt="My Picture">
+                        </div>
+                        <div class="Right_Row">
+                            <p>
+                                <span class="tab"></span>Hey there! I'm <span>Titus Thomas</span> - a name that means <span>'title'</span> and <span>'twin'</span> in Latin, but don't
+                                worry, I'm not here to claim any crown♛ or thrones… I'm all about tech and trying new things! I love exploring the latest gadgets, experimenting with 
+                                fresh ideas, and diving into new challenges. Check out my work - who knows, you might find something that sparks your curiosity!
+                            </p>
+                            <p>
+                                <span class="tab"></span>An Engineer with totally <span>5 years</span> of experience in <span>Hardware Interface</span> in which <span>2 years</span>
+                                of experience in <span>LabVIEW Programming</span> & looking forward to work on a creative environment with new technologies.
+                            </p>
+                            <div id="Profile">
+                                <h4>PROFILE</h4>
+                                <div id="Personal_Details">
+                                    <ul id="segments">
+                                        <li><strong>FULL NAME</strong></li>
+                                        <li><strong>DATE OF BIRTH</strong></li>
+                                        <li><strong>CURRENT ROLE</strong></li>
+                                        <li><strong>WEBSITE</strong></li>
+                                        <li><strong>MAIL ID</strong></li>
+                                    </ul>
+                                    <ul id="values">
+                                        <li><span>Titus Thomas</span></li>
+                                        <li><span>16.09.1999</span></li>
+                                        <li><span>ATE Engineer</span></li>
+                                        <li><span><a href="www.titusthomas.com">www.titusthomas.com</a></span></li>
+                                        <li><span><a href="tttitus99@gmail.com">tttitus99@gmail.com</a></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Details" id="Progress_Bar">
+                        <div class="Left_Row">
+                            <div id="Skills">
+                                <h4>SKILLS</h4>
+                                <div class="Wrapper">
+
+                                    <div class="Bar">
+                                        <div class="Info">
+                                            <span>LABVIEW</span>
+                                        </div>
+                                        <div class="Progress_Bar">
+                                            <span class="labview"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="Bar">
+                                        <div class="Info">
+                                            <span>HTML</span>
+                                        </div>
+                                        <div class="Progress_Bar">
+                                            <span class="html"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="Bar">
+                                        <div class="Info">
+                                            <span>CSS</span>
+                                        </div>
+                                        <div class="Progress_Bar">
+                                            <span class="css"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="Bar">
+                                        <div class="Info">
+                                            <span>JAVASCRIPT</span>
+                                        </div>
+                                        <div class="Progress_Bar">
+                                            <span class="javascript"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="Bar">
+                                        <div class="Info">
+                                            <span>REACT JS</span>
+                                        </div>
+                                        <div class="Progress_Bar">
+                                            <span class="react-js"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="Bar">
+                                        <div class="Info">
+                                            <span>MY SQL</span>
+                                        </div>
+                                        <div class="Progress_Bar">
+                                            <span class="my-sql"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="Bar">
+                                        <div class="Info">
+                                            <span>JAVA</span>
+                                        </div>
+                                        <div class="Progress_Bar">
+                                            <span class="java"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Right_Row">
+                            <div id="Tools">
+                                <h4>TOOLS</h4>
+                                <div class="Wrapper">
+
+                                    <div class="Bar">
+                                        <div class="Info">
+                                            <span>GIT & GITHUB</span>
+                                        </div>
+                                        <div class="Progress_Bar">
+                                            <span class="html"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="Bar">
+                                        <div class="Info">
+                                            <span>CI/CD</span>
+                                        </div>
+                                        <div class="Progress_Bar">
+                                            <span class="ci-cd"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="Bar">
+                                        <div class="Info">
+                                            <span>JIRA</span>
+                                        </div>
+                                        <div class="Progress_Bar">
+                                            <span class="jira"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="Bar">
+                                        <div class="Info">
+                                            <span>DOCKER</span>
+                                        </div>
+                                        <div class="Progress_Bar">
+                                            <span class="docker"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="Bar">
+                                        <div class="Info">
+                                            <span>KUBERNETES</span>
+                                        </div>
+                                        <div class="Progress_Bar">
+                                            <span class="kubernetes"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Hire_me">
+                        <button type="submit"><a href="#Connect">HIRE ME</a></button>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!--==========section-3 Resume==========-->
-        <section id="Resume" class="page">
-            <h2>Resume</h2>
-            <p>-----Type here-----</p>
+        <section id="Resume" class="Page">
+            <div class="Content">
+                <div class="Heading">
+                    <h2>RESUME</h2>
+                    <p>-----Type here-----</p>
+                </div>
+            </div>
         </section>
 
         <!--==========section-4 Project==========-->
-        <section id="Project" class="page">
-            <h2>Project</h2>
-            <p>-----Type here-----</p>
+        <section id="Project" class="Page">
+            <div class="Content">
+                <div class="Heading">
+                    <h2>PROJECTS</h2>
+                    <p>-----Type here-----</p>
+                </div>
+            </div>
         </section>
 
         <!--==========section-5 Certificates==========-->
-        <section id="Certificates" class="page">
-            <h2>Certificates</h2>
-            <p>-----Type here-----</p>
+        <section id="Certificates" class="Page">
+            <div class="Content">
+                <div class="Heading">
+                    <h2>CERTIFICATES</h2>
+                    <p>-----Type here-----</p>
+                </div>
+            </div>
         </section>
 
         <!--==========section-5 Contacts==========-->
-        <section id="Contact" class="page">
-            <h2>Contact</h2>
-            <p>-----Type here-----</p>
+        <section id="Connect" class="Page">
+            <div class="Content">
+                <div class="Heading">
+                    <h2>CONNECT WITH ME</h2>
+                    <p>-----Type here-----</p>
+                </div>
+            </div>
         </section>
     </main>
+    <footer>
+        Made by Titus Thomas
+    </footer>
     <script src="script.js"></script> <!--Linked the script.js file here-->
 </body>
 </html>
