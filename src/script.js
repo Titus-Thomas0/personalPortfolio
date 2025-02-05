@@ -92,3 +92,26 @@ function displayItems() {
 window.onload = displayItems;
 window.onresize = displayItems;
 window.onscroll = displayItems;
+
+
+
+//==========JavaScript for showing project details in model==========
+
+const seeMore = document.querySelector('.seeMore');
+const project1Model = document.getElementById("Project1-Model");
+const modalWrapper = document.querySelector(".modalWrapper")
+const closeButton = document.querySelector('.closeButton');
+
+seeMore.onclick = () => {
+    project1Model.showModal();
+}
+
+closeButton.onclick = () => {
+    project1Model.close();
+}
+
+project1Model.addEventListener("click", (e) => {
+    if(!modalWrapper.contains(e.target)) {
+        project1Model.close();
+    }
+});

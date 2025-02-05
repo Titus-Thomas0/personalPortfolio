@@ -217,7 +217,7 @@ nav ul li {
     color: #b4121b;
 }
 
-.dropdownList.active {
+.dropdownList .active {
     color: #b4121b;
     font-weight: bold;
 }
@@ -766,13 +766,119 @@ nav ul li {
     transition: all 1.5s;
 }
 
-
 #Project {
     position: relative;
     color: #b4121b;
     width: 100%;
     max-height: max-content;
     border: 2px solid red;
+}
+
+.Project-List {
+    display: block;
+}
+
+.Project-Card {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 20px 20px 50px 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.Project-Card img {
+    height: 200px;
+    width: 250px;
+}
+
+.Project-Details {
+    padding: 10px 20px 10px 20px;
+    background: #FFFFFF;
+}
+
+.Project-Details small {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: grey;
+}
+
+.Project-Details p {
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.Project-Details p a {
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Project-Details p a:hover {
+    color: #b4121b;
+}
+
+.Project-Details span {
+    text-align: center;
+    padding: 5px 10px 5px 10px;
+    margin-right: 10px;
+    background: #b4121b;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.Project-model {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: max-content;
+    width: 50%;
+    border: 5px solid #b4121b;
+    background: #000000;
+}
+
+.Project-model::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.Project-model header {
+    margin-top: 20px;
+    border-bottom: 2px solid #b4121b;
+}
+
+.Project-model h3 {
+    padding: 10px 20px 0px;
+    color: #b4121b;
+    letter-spacing: 5px;
+}
+
+.Project-model p {
+    padding: 10px 20px;
+    color: #FFFFFF;
+}
+
+.Project-model p span {
+    padding: 20px;
+    background: none;
+}
+
+.Project-model .closeButton {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: larger;
+    text-align: center;
+    letter-spacing: 5px;
+    background: transparent;
+    color: #b4121b;
+    border-top: 3px solid #b4121b;
+    cursor: pointer;
+}
+
+.Project-model .closeButton:hover {
+    background: #b4121b;
+    color: #000000;
+    font-weight: bolder;
 }
 
 #Certificates {
