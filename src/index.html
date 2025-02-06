@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Linked the font file here-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--Linked the font file here-->
     <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> <!--Linked the font file here-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back_ios,arrow_forward_ios " />
     <script src="https://kit.fontawesome.com/a92ab7f82e.js" crossorigin="anonymous"></script>
     <title>Titus Thomas</title>
     <link rel="stylesheet" href="style.css"> <!--Linked the style.css file here-->
@@ -46,7 +47,7 @@
                 <li><a href="#Resume" class="navList">Resume</a></li>
                 <li><a href="#Project" class="navList">Projects</a></li>
                 <li><a href="#Certificates" class="navList">Certificates</a></li>
-                <li><a href="#Services" class="navList">Services</a></li>
+                <!-- <li><a href="#Services" class="navList">Services</a></li> -->
                 <li><a href="#Connect" class="navList">Connect</a></li>
             </ul>
         </nav>
@@ -391,9 +392,59 @@
                 <div class="Sub-Content">
                     <div class="Project-List">
                         <!-- <div class="sortBy"></div> -->
-                         
+
+                        <div class="Project-Card">
+                            <img src="assets/images/Project Images/PortFolio.png" alt="Portfolio">
+                            <div class="Project-Details">
+                                <h3>PERSONAL PORTFOLIO</h3>
+                                <small>Dec 2024 - Feb 2025</small>
+                                <p>
+                                    As part of my journey to master web development, I created my personal portfolio from scratch using only HTML, CSS, and JavaScript. This project
+                                    was built without any additional libraries or frameworks, allowing me to deeply understand the fundamentals of front-end development.
+                                    <a id="seeMore1">See more&#8599;</a>
+                                </p>
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+
+                        <div class="Project-Card">
+                            <img src="assets/images/Project Images/Aurio.png" alt="Portfolio">
+                            <div class="Project-Details">
+                                <h3>MUSIC PLAYER WEBSITE - AURIO</h3>
+                                <small>Jan 2024 - Present</small>
+                                <p>
+                                    Aurio is a music player website that I built as part of my journey in learning web development. Developed using React.js and Bootstrap, this
+                                    project helped me understand component-based architecture, state management, and responsive design. Through Aurio, I gained hands-on experience
+                                    in building interactive UI elements and enhancing user experience.
+                                    <a id="seeMore2">See more&#8599;</a>
+                                </p>
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>REACT JS</span>
+                            </div>
+                        </div>
+
+                        <!-- <div class="Project-Card">
+                            <img src="assets/images/Project Images/PortFolio.jpg" alt="Portfolio">
+                            <div class="Project-Details">
+                                <h3>PERSONAL PORTFOLIO</h3>
+                                <small>Dec 2024 - Feb 2025</small>
+                                <p>
+                                    As part of my journey to master web development, I created my personal portfolio from scratch using only HTML, CSS, and JavaScript. This project
+                                    was built without any additional libraries or frameworks, allowing me to deeply understand the fundamentals of front-end development.
+                                    <a id="seeMore3">See more&#8599;</a>
+                                </p>
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div> -->
+
                         <dialog id="Project1-Model" class="Project-model">
-                            <div class="modalWrapper">
+                            <div id="modalWrapper1">
                                 <h3>PERSONAL PORTFOLIO</h3>
                             <p>
                                 <span></span>Embarking on the creation of my personal portfolio website using only HTML, CSS, and JavaScript was a deliberate choice to deepen my
@@ -412,57 +463,31 @@
                                 continuous learning and improvement.
                             </p>
 
-                            <a class="closeButton">Close</a>
+                            <a id="closeButton1" class="closeButton">Close</a>
                             </div>
                         </dialog>
 
-                        <div class="Project-Card">
-                            <img src="assets/images/Project Images/PortFolio.jpg" alt="Portfolio">
-                            <div class="Project-Details">
-                                <h3>PERSONAL PORTFOLIO</h3>
-                                <small>Dec 2024 - Feb 2025</small>
-                                <p>
-                                    As part of my journey to master web development, I created my personal portfolio from scratch using only HTML, CSS, and JavaScript. This project
-                                    was built without any additional libraries or frameworks, allowing me to deeply understand the fundamentals of front-end development.
-                                    <a class="seeMore">See more&#8599;</a>
-                                </p>
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                            </div>
-                        </div>
-
-                        <div class="Project-Card">
-                            <img src="assets/images/Project Images/PortFolio.jpg" alt="Portfolio">
-                            <div class="Project-Details">
+                        <dialog id="Project2-Model" class="Project-model">
+                            <div id="modalWrapper2">
                                 <h3>MUSIC PLAYER WEBSITE - TUNIC</h3>
-                                <small>Dec 2024 - Feb 2025</small>
-                                <p>
-                                    As part of my journey to master web development, I created my personal portfolio from scratch using only HTML, CSS, and JavaScript. This project
-                                    was built without any additional libraries or frameworks, allowing me to deeply understand the fundamentals of front-end development.
-                                    <a class="seeMore">See more&#8599;</a>
-                                </p>
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                            </div>
-                        </div>
+                            <p>
+                                <span></span>Aurio is a music player website that I developed as part of my journey into web development. This project was built using React.js and
+                                Bootstrap, allowing me to gain hands-on experience with modern front-end technologies. By working on Aurio, I learned how to structure a React
+                                application, manage state efficiently, and design a responsive user interface that adapts well to different screen sizes. The project also gave me an
+                                opportunity to explore integrating media playback functionalities, handling user interactions smoothly, and optimizing performance for a seamless
+                                experience.
+                            </p>
+                
+                            <p>
+                                <span></span>To build Aurio, I used JSX (JavaScript XML) to structure the UI components efficiently, making the code more readable and maintainable.
+                                React's component-based architecture helped me break down the application into reusable pieces, improving both scalability and development speed.
+                                Bootstrap played a key role in styling the application, allowing me to create a visually appealing and responsive design with minimal effort. Through
+                                this project, I gained a deeper understanding of how front-end frameworks work together and how to create dynamic, interactive web applications.
+                            </p>
 
-                        <div class="Project-Card">
-                            <img src="assets/images/Project Images/PortFolio.jpg" alt="Portfolio">
-                            <div class="Project-Details">
-                                <h3>PERSONAL PORTFOLIO</h3>
-                                <small>Dec 2024 - Feb 2025</small>
-                                <p>
-                                    As part of my journey to master web development, I created my personal portfolio from scratch using only HTML, CSS, and JavaScript. This project
-                                    was built without any additional libraries or frameworks, allowing me to deeply understand the fundamentals of front-end development.
-                                    <a class="seeMore">See more&#8599;</a>
-                                </p>
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
+                            <a id="closeButton2" class="closeButton">Close</a>
                             </div>
-                        </div>
+                        </dialog>
 
                     </div>
                 </div>
@@ -474,30 +499,96 @@
             <div class="Content">
                 <div class="Heading">
                     <h2>CERTIFICATES</h2>
-                    <p>-----Type here-----</p>
+                    <h3>The <span>value</span> of a certificate lies in the <span>journey</span>🚶‍♂️ it represents, not just the <span>final destination🌃...</span></h3>
+                </div>
+                <div class="Sub-Content">
+                    <div class="Carousel">
+
+                        <div class="Carousal-Container">
+                            <ul class="Carousal-Tracker">
+                                <li class="Carousal-Slide">
+                                    <img class="Carousal-Image" src="assets/images/Certificates/Codedex HTML Certificate.jpg" alt="Codedex HTML Certificate">
+                                </li>
+                                <li class="Carousal-Slide">
+                                    <img class="Carousal-Image" src="assets/images/Certificates/Codedex HTML Certificate.jpg" alt="Codedex HTML Certificate">
+                                </li>
+                                <li class="Carousal-Slide">
+                                    <img class="Carousal-Image" src="assets/images/Certificates/Codedex HTML Certificate.jpg" alt="Codedex HTML Certificate">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button class="carouselButton carouselButton-Left">
+                            <span class="material-symbols-outlined">arrow_back_ios</span>
+                        </button>
+                        <button class="carouselButton carouselButton-Right">
+                            <span class="material-symbols-outlined">arrow_forward_ios</span>
+                        </button>
+
+                        <div class="carousalNav">
+                            <button class="Carousel-Indicator current-slide"></button>
+                            <button class="Carousel-Indicator"></button>
+                            <button class="Carousel-Indicator"></button>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!--==========section-6 Certificates==========-->
-        <section id="Services" class="Page">
+        <!--==========section-6 Services==========-->
+        <!-- <section id="Services" class="Page">
             <div class="Content">
                 <div class="Heading">
                     <h2>SERVICES</h2>
                     <p>-----Type here-----</p>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!--==========section-7 Contacts==========-->
         <section id="Connect" class="Page">
             <div class="Content">
                 <div class="Heading">
                     <h2>CONNECT WITH ME</h2>
-                    <p>-----Type here-----</p>
+                    <h3>We are each other's <span>harvest🌱;</span>we are each other's <span>business💼;</span> we are each other's <span>magnitude and bond🤝...</span></h3>
+                </div>
+                <div class="Sub-Content">
+                    <div class="Form-Container">
+                        <form name="connectForm" id="connectForm" method="post" action novalidate="novalidate">
+                            <fieldset>
+
+                                <div class="form-field">
+                                    <input name="connectName" type="text" id="connectName" value minlength="2" placeholder=" " required>
+                                    <label id="" for="connectName">Name</label>
+                                </div>
+
+                                <div class="form-field">
+                                    <input name="connectEmail" type="email" id="connectEmail" value placeholder=" " required>
+                                    <label id="" for="connectEmail">Email</label>
+                                </div>
+
+                                <div class="form-field">
+                                    <input name="connectSubject" type="text" id="connectSubject" value minlength="2" placeholder=" " required>
+                                    <label id="" for="connectSubject">Subject</label>
+                                </div>
+
+                                <div class="form-field">
+                                    <textarea name="connectMessage" id="connectMessage" rows="10" cols="50" minlength="10" placeholder=" " required></textarea>
+                                    <label id="connectMessage" for="connectMessage" class="connectMessage-label">Message</label>
+                                </div>
+
+                                <div class="form-field">
+                                    <button type="submit">SEND</button>
+                                </div>
+
+                            </fieldset>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
+        
     </main>
     <footer>
         Made by Titus Thomas

@@ -97,21 +97,46 @@ window.onscroll = displayItems;
 
 //==========JavaScript for showing project details in model==========
 
-const seeMore = document.querySelector('.seeMore');
-const project1Model = document.getElementById("Project1-Model");
-const modalWrapper = document.querySelector(".modalWrapper")
-const closeButton = document.querySelector('.closeButton');
+//==========JavaScript for showing project details in model of #Project 1==========
 
-seeMore.onclick = () => {
+const seeMore1 = document.getElementById('seeMore1');
+const project1Model = document.getElementById("Project1-Model");
+const modalWrapper1 = document.getElementById("modalWrapper1")
+const closeButton1 = document.getElementById("closeButton1");
+
+seeMore1.onclick = () => {
     project1Model.showModal();
 }
 
-closeButton.onclick = () => {
+closeButton1.onclick = () => {
     project1Model.close();
 }
 
 project1Model.addEventListener("click", (e) => {
-    if(!modalWrapper.contains(e.target)) {
+    if(!modalWrapper1.contains(e.target)) {
         project1Model.close();
+    }
+});
+
+
+//==========JavaScript for showing project details in model of #Project 2==========
+
+const seeMore2 = document.getElementById('seeMore2');
+const project2Model = document.getElementById("Project2-Model");
+const modalWrapper2 = document.getElementById("modalWrapper2")
+const closeButton2 = document.getElementById('closeButton2');
+
+
+seeMore2.onclick = () => {
+    project2Model.showModal();
+}
+
+closeButton2.onclick = () => {
+    project2Model.close();
+}
+
+project2Model.addEventListener("click", (e) => {
+    if(!modalWrapper2.contains(e.target)) {
+        project2Model.close();
     }
 });

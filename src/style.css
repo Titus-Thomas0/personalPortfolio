@@ -154,7 +154,6 @@ nav ul li {
 /*==========Nav ul li a elements on hover styles==========*/
 .navList:hover {
     color: #b4121b;
-    border-bottom: 2px solid #b4121b ;
 }
 
 .navList.active {
@@ -192,7 +191,6 @@ nav ul li {
 
 .dropdown:hover .navList {
     color: #b4121b;
-    border-bottom: 2px solid #b4121b;
 }
 
 .dropdown:hover .navList svg path{
@@ -225,8 +223,8 @@ nav ul li {
 /*==========Home elements styles==========*/
 #Home {
     height: 100vh;
-    position: static;
-    background: url(assets/images/Background\ Images/Main\ Background.jpg);
+    position: relative;
+    background: url(assets/images/Background\ Images/Certificate\ Background.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -622,22 +620,6 @@ nav ul li {
     width: 50%;
 }
 
-.timeline-item:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.timeline-item:nth-child(2) {
-    animation-delay: 1s;
-}
-
-.timeline-item:nth-child(3) {
-    animation-delay: 2s;
-}
-
-.timeline-item:nth-child(4) {
-    animation-delay: 3s;
-}
-
 .text-box {
     padding: 20px 30px;
     background: #FFFFFF;
@@ -758,6 +740,7 @@ nav ul li {
     display: block;
     text-align: center;
     margin-top: 1rem;
+    margin-bottom: 60px;
 }
 
 .in-view {
@@ -771,11 +754,11 @@ nav ul li {
     color: #b4121b;
     width: 100%;
     max-height: max-content;
-    border: 2px solid red;
 }
 
 .Project-List {
     display: block;
+    margin-bottom: 60px;
 }
 
 .Project-Card {
@@ -783,6 +766,7 @@ nav ul li {
     display: flex;
     width: 100%;
     margin: 20px 20px 50px 20px;
+    
     border-radius: 10px;
     overflow: hidden;
 }
@@ -790,11 +774,26 @@ nav ul li {
 .Project-Card img {
     height: 200px;
     width: 250px;
+    background: gray;
 }
 
 .Project-Details {
     padding: 10px 20px 10px 20px;
     background: #FFFFFF;
+}
+
+.Project-Details::before {
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #FFFFFF;
+    left: 186px;
 }
 
 .Project-Details small {
@@ -809,7 +808,7 @@ nav ul li {
 }
 
 .Project-Details p a {
-    color: #000000;
+    color: grey;
     font-weight: bold;
     cursor: pointer;
 }
@@ -884,32 +883,234 @@ nav ul li {
 #Certificates {
     position: relative;
     color: #b4121b;
-    width: 100%;
-    max-height: max-content;
+    height: 100vh;
     border: 2px solid blue;
 }
 
-#Services {
+.Carousel {
+    height: 75vh;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.Carousal-Image {
+    height: 70vh;
+    width: 80%;
+    background: #FFFFFF;
+    object-fit: fill;
+}
+
+.Carousal-Container {
+    height: 100%;
+    position: relative;
+}
+
+.Carousal-Tracker {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.Carousal-Slide {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carouselButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+.carouselButton-Left {
+    left: 150px;
+}
+
+.carouselButton-Right {
+    right: 150px;
+}
+
+.material-symbols-outlined {
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.1);
+}
+
+.material-symbols-outlined:hover {
+    color: rgb(0, 0, 0);
+}
+
+.carousalNav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 25px;
+    padding: 10px;
+}
+
+.Carousel-Indicator {
+    border: 0;
+    border-radius: 10px;
+    height: 5px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 0 10px;
+}
+
+.Carousel-Indicator.current-slide {
+    background: rgb(0, 0, 0);
+}
+
+/* #Services {
     position: relative;
     color: #b4121b;
     width: 100%;
     max-height: max-content;
     border: 2px solid green;
-}
+} */
 
 #Connect {
     position: relative;
     color: #b4121b;
     width: 100%;
     max-height: max-content;
-    border: 2px solid yellow;
+}
+
+.Form-Container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 90px;
+}
+
+fieldset {
+    border: transparent;
+}
+
+.form-field {
+    position: relative;
+    margin: 20px 0;
+}
+
+.form-field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: gray;
+    padding: 0 5px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.form-field .connectMessage-label {
+    position: absolute;
+    top: 5%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: gray;
+    padding: 0 5px;
+    pointer-events: none;
+}
+
+.form-field input {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    color: #b4121b;
+    padding: 0 10px;
+    background: transparent;
+    border: 2px solid gray;
+    outline: none;
+    border-radius: 5px;
+    
+}
+
+.form-field input:hover {
+    border: 2px solid #b4121b;
+}
+
+.form-field textarea {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    color: #b4121b;
+    padding: 0 10px;
+    background: transparent;
+    border: 2px solid gray;
+    outline: none;
+    border-radius: 5px;
+}
+
+.form-field textarea:hover {
+    border: 2px solid #b4121b;
+}
+
+.form-field button {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    color: gray;
+    padding: 10px 10px;
+    background: transparent;
+    border: 2px solid gray;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 5px;
+}
+
+.form-field input:not(:placeholder-shown)~label,
+.form-field textarea:not(:placeholder-shown)~label {
+    top: 0;
+    font-family: 12px;
+    background: #000000;
+    color: gray;
+}
+
+.form-field input:focus,
+.form-field input:valid,
+.form-field textarea:focus,
+.form-field textarea:valid {
+    border: 2px solid #b4121b;
+}
+
+.form-field input:focus~label,
+.form-field input:valid~label,
+.form-field textarea:focus~label,
+.form-field textarea:valid~label {
+    top: 0;
+    font-family: 12px;
+    background: #000000;
+    color: #b4121b;
+}
+
+.form-field button:hover {
+    background: #b4121b;
+    border: 2px solid #b4121b;
+    color: #FFFFFF;
+    font-weight: bolder;
 }
 
 footer {
-    background: #FFFFFF;
+    background: #444444;
+    position: relative;
     color: #b4121b;
     text-align: center;
     padding: 10px 0px;
+    width: 100%;
+    max-height: max-content;
+    border-top: 2px solid gray;
+    margin-top: 50px;
 }
 
 @media screen and (max-width:600px) {
