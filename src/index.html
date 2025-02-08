@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Linked the font file here-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--Linked the font file here-->
     <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> <!--Linked the font file here-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back_ios,arrow_forward_ios " />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back_ios,arrow_forward_ios,contrast,dark_mode,keyboard_double_arrow_up,light_mode " />
     <script src="https://kit.fontawesome.com/a92ab7f82e.js" crossorigin="anonymous"></script>
     <title>Titus Thomas</title>
     <link rel="stylesheet" href="style.css"> <!--Linked the style.css file here-->
@@ -25,8 +25,8 @@
                 <span></span> <!--child-3-->
             </div>
             <!--==========Webpage Logo==========-->
-            <div id="logo">
-                <a id="logoText" href="index.html"><h1>TITUS THOMAS<span>.</span></h1></a> <!--logo text is added here-->
+            <div class="logo">
+                <a class="logoText" href="index.html"><h1>TITUS THOMAS<span>.</span></h1></a> <!--logo text is added here-->
             </div>
             <!--==========Navigation Items==========-->
             <ul id="navItem">
@@ -45,7 +45,7 @@
                     </ul>
                 </li>
                 <li><a href="#Resume" class="navList">Resume</a></li>
-                <li><a href="#Project" class="navList">Projects</a></li>
+                <li><a href="#Projects" class="navList">Projects</a></li>
                 <li><a href="#Certificates" class="navList">Certificates</a></li>
                 <!-- <li><a href="#Services" class="navList">Services</a></li> -->
                 <li><a href="#Connect" class="navList">Connect</a></li>
@@ -55,11 +55,6 @@
 
     <!--==========main==========-->
     <main>
-
-        <!-- <div class="Mode">
-            <button>Light</button>
-        </div> -->
-
         <!--==========section-1 Home==========-->
         <section id="Home" class="Page">
             <!--==========My intro to this world==========-->
@@ -383,7 +378,7 @@
         </section>
 
         <!--==========section-4 Project==========-->
-        <section id="Project" class="Page">
+        <section id="Projects" class="Page">
             <div class="Content">
                 <div class="Heading">
                     <h2>PROJECTS</h2>
@@ -519,10 +514,10 @@
                         </div>
 
                         <button class="carouselButton carouselButton-Left">
-                            <span class="material-symbols-outlined">arrow_back_ios</span>
+                            <span class="material-symbols-outlined slideArrows">arrow_back_ios</span>
                         </button>
                         <button class="carouselButton carouselButton-Right">
-                            <span class="material-symbols-outlined">arrow_forward_ios</span>
+                            <span class="material-symbols-outlined slideArrows">arrow_forward_ios</span>
                         </button>
 
                         <div class="carousalNav">
@@ -579,7 +574,7 @@
                                 </div>
 
                                 <div class="form-field">
-                                    <button type="submit">SEND</button>
+                                    <button type="submit">SEND MAIL</button>
                                 </div>
 
                             </fieldset>
@@ -591,7 +586,127 @@
         
     </main>
     <footer>
-        Made by Titus Thomas
+        <div class="upArrow">
+            <a href="#Home">
+                <span class="material-symbols-outlined doubleUpArrow">keyboard_double_arrow_up</span>
+            </a>
+        </div>
+
+        <div class="Content">
+            <div class="footerRow">
+
+                <div class="logo">
+                    <p>Made by <a class="logoText" href="index.html">TITUS THOMAS<span>.</span></a></p> <!--logo text is added here-->
+                </div>
+
+                <div class="Mode">
+                    <button type="button">
+                        <span class="material-symbols-outlined mode">contrast</span>
+                        Appearance Setting
+                    </button>
+                </div>
+
+                <dialog>
+
+                    <button type="button">
+                        <span class="material-symbols-outlined mode">contrast</span>
+                        System
+                    </button>
+
+                    <button type="button">
+                        <span class="material-symbols-outlined mode">dark_mode</span>
+                        Dark
+                    </button>
+
+                    <button type="button">
+                        <span class="material-symbols-outlined mode">light_mode</span>
+                        Light
+                    </button>
+
+                </dialog>
+
+            </div>
+
+            <div class="footerRow">
+
+                <div class="index">
+                    <ul>
+
+                        <li>
+                            <a href="#Home">Home</a>
+                        </li>
+
+                        <li>
+                            About me
+                            <ul>
+
+                                <li>
+                                    <a href="#About_me">Overview</a>
+                                </li>
+
+                                <li>
+                                    <a href="#Skills">Skills</a>
+                                </li>
+
+                                <li>
+                                    <a href="#Tools">Tools</a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#Resume">Resume</a>
+                        </li>
+
+                        <li>
+                            <a href="#Projects">Projects</a>
+                        </li>
+
+                        <li>
+                            <a href="#Certificates">Certificates</a>
+                        </li>
+
+                        <!-- <li>
+                            <a href="#Service">Service</a>
+                        </li> -->
+
+                        <li>
+                            <a href="#Connect">Connect</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="socialMedia">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <svg style="--accent-color: #007ab9" fill="#000000" width="50px" height="50px" viewBox="0 0 64.00 64.00" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00064"><g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(12.8,12.8), scale(0.6)"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.128"></g><g id="SVGRepo_iconCarrier"><title></title><path d="M44,7H20A13,13,0,0,0,7,20V44A13,13,0,0,0,20,57H44A13,13,0,0,0,57,44V20A13,13,0,0,0,44,7ZM55,44A11,11,0,0,1,44,55H20A11,11,0,0,1,9,44V20A11,11,0,0,1,20,9H44A11,11,0,0,1,55,20Z"></path><path d="M22,25H15a1,1,0,0,0-1,1V49a1,1,0,0,0,1,1h7a1,1,0,0,0,1-1V26A1,1,0,0,0,22,25ZM21,48H16V27h5Z"></path><path d="M42,25h0a14.18,14.18,0,0,0-7,2.11V26a1,1,0,0,0-1-1H27a1,1,0,0,0-1,1V49a1,1,0,0,0,1,1h7a1,1,0,0,0,1-1V33.81A7.66,7.66,0,0,1,38,33c2.81,0,3,2,3,2.44V49a1,1,0,0,0,1,1h7a1,1,0,0,0,1-1V33.17a8.3,8.3,0,0,0-2.14-6.11A7.93,7.93,0,0,0,42,25Zm6,23H43V35.44C43,33.9,42,31,38,31a10.24,10.24,0,0,0-4.45,1.29,1,1,0,0,0-.55.89V48H28V27h5v2.06a1,1,0,0,0,1.66.75A12.31,12.31,0,0,1,42,27h0a6,6,0,0,1,4.42,1.47A6.41,6.41,0,0,1,48,33.17Z"></path><path d="M18.5,14A4.5,4.5,0,1,0,23,18.5,4.5,4.5,0,0,0,18.5,14Zm0,7A2.5,2.5,0,1,1,21,18.5,2.5,2.5,0,0,1,18.5,21Z"></path></g></svg>
+    
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="">
+                                <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" width="50px" height="50px" fill="#FFFFFF"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:none;stroke:#000000;stroke-width:0.768;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st1{fill:none;stroke:#000000;stroke-width:0.768;stroke-linejoin:round;stroke-miterlimit:10;} </style> <path class="st0" d="M25,27H7c-2.2,0-4-1.8-4-4V9c0-2.2,1.8-4,4-4h18c2.2,0,4,1.8,4,4v14C29,25.2,27.2,27,25,27z"></path> <polyline class="st0" points="3,10 16,18 29,10 "></polyline> </g></svg>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="">
+                                <svg style="--accent-color: #962fbf" fill="#000000" width="50px" height="50px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title></title><path d="M44,57H20A13,13,0,0,1,7,44V20A13,13,0,0,1,20,7H44A13,13,0,0,1,57,20V44A13,13,0,0,1,44,57ZM20,9A11,11,0,0,0,9,20V44A11,11,0,0,0,20,55H44A11,11,0,0,0,55,44V20A11,11,0,0,0,44,9Z"></path><path d="M32,43.67A11.67,11.67,0,1,1,43.67,32,11.68,11.68,0,0,1,32,43.67Zm0-21.33A9.67,9.67,0,1,0,41.67,32,9.68,9.68,0,0,0,32,22.33Z"></path><path d="M44.5,21A3.5,3.5,0,1,1,48,17.5,3.5,3.5,0,0,1,44.5,21Zm0-5A1.5,1.5,0,1,0,46,17.5,1.5,1.5,0,0,0,44.5,16Z"></path></g></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyrights">
+                <small>Copyrights <i class="fa fa-copyright" aria-hidden="true"></i> 2025 Titus Thomas. All Rights Reserved.</small>
+            </div>
+
+        </div>
     </footer>
     <script src="script.js"></script> <!--Linked the script.js file here-->
 </body>
