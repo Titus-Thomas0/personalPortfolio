@@ -140,3 +140,154 @@ project2Model.addEventListener("click", (e) => {
         project2Model.close();
     }
 });
+
+
+
+//==========JavaScript for updating carousal in certificate section==========
+
+const tracker = document.querySelector('.Carousal-Tracker');
+const slides = Array.from(tracker.children);
+
+const nextButton = document.querySelector('.carouselButton-Right');
+const prevButton = document.querySelector('.carouselButton-Left');
+
+const text = document.querySelector('.carousalText');
+const captions = Array.from(text.children);
+
+const navIndicator = document.querySelector('.carousalNav');
+const indicators = Array.from(navIndicator.children);
+
+const slideWidth = slides[0].getBoundingClientRect().width;
+
+//Arrange the slides next to each other
+
+const setSlidePosition = (slides, index) => {
+    slides.style.left = slideWidth * index +'px';
+};
+
+slides.forEach(setSlidePosition);
+
+//Function to move slide
+
+const moveSlide = (tracker, currentSlide, targetSlide) => {
+    tracker.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+    currentSlide.classList.remove('current-slide');
+    targetSlide.classList.add('current-slide');
+};
+
+//Function to update caption
+
+const updateCaption = (currentCaption, targetCaption) => {
+    currentCaption.classList.remove('current-slide');
+    targetCaption.classList.add('current-slide');
+};
+
+//Function to update indicator
+
+const updateIndicator = (currentIndicator, targetIndicator) => {
+    currentIndicator.classList.remove('current-slide');
+    targetIndicator.classList.add('current-slide');
+};
+
+//Function to hide and show arrow buttons
+const hideShowArrow = (slides, prevButton, nextButton, targetIndex) => {
+    if (targetIndex === 0) {
+        prevButton.classList.add('is-hidden');
+        nextButton.classList.remove('is-hidden');
+    }
+    else if (targetIndex === slides.length - 1) {
+        prevButton.classList.remove('is-hidden');
+        nextButton.classList.add('is-hidden');
+    }
+    else {
+        prevButton.classList.remove('is-hidden');
+        nextButton.classList.remove('is-hidden');
+    }
+};
+
+//When clicking prevButton, move the slide to left
+
+prevButton.addEventListener('click', e => {
+    const currentSlide = tracker.querySelector('.current-slide');
+    const prevSlide = currentSlide.previousElementSibling;
+    const currentIndicator = navIndicator.querySelector('.current-slide');
+    const prevIndicator = currentIndicator.previousElementSibling;
+    const currentCaption = text.querySelector('.current-slide')
+    const prevCaption = currentCaption.previousElementSibling;
+    const prevIndex = slides.findIndex(slide => slide === prevSlide);
+
+    //Move to next slide
+
+    moveSlide(tracker, currentSlide, prevSlide);
+
+    //update caption
+    
+    updateCaption(currentCaption, prevCaption);
+
+    //update indicator
+
+    updateIndicator(currentIndicator, prevIndicator);
+
+    //hide and arrow buttons
+
+    hideShowArrow(slides, prevButton, nextButton, prevIndex);
+});
+
+//When clicking nextButton, move the slide to right
+
+nextButton.addEventListener('click', e => {
+    const currentSlide = tracker.querySelector('.current-slide');
+    const nextSlide = currentSlide.nextElementSibling;
+    const currentIndicator = navIndicator.querySelector('.current-slide');
+    const nextIndicator = currentIndicator.nextElementSibling;
+    const currentCaption = text.querySelector('.current-slide')
+    const nextCaption = currentCaption.nextElementSibling;
+    const nextIndex = slides.findIndex(slide => slide === nextSlide);
+
+    //Move to next slide
+
+    moveSlide(tracker, currentSlide, nextSlide);
+
+    //update caption
+
+    updateCaption(currentCaption, nextCaption);
+
+    //update indicator
+
+    updateIndicator(currentIndicator, nextIndicator);
+
+    //hide and arrow buttons
+
+    hideShowArrow(slides, prevButton, nextButton, nextIndex);
+});
+
+//When clicking navIndicator, move to that slide
+
+navIndicator.addEventListener('click', e => {
+    const targetIndicator = e.target.closest('button');
+
+    if (!targetIndicator) return;
+
+    const currentSlide = tracker.querySelector('.current-slide');
+    const currentIndicator = navIndicator.querySelector('.current-slide');
+    const targetIndex = indicators.findIndex(indicator => indicator === targetIndicator);
+    const targetSlide = slides[targetIndex];
+    const currentCaption = text.querySelector('.current-slide')
+    const targetCaption = captions[targetIndex];
+
+    //Move to target slide
+
+    moveSlide(tracker, currentSlide, targetSlide);
+
+    //update caption
+
+    updateCaption(currentCaption, targetCaption);
+
+    //update indicator
+
+    updateIndicator(currentIndicator, targetIndicator);
+
+    //hide and arrow buttons
+
+    hideShowArrow(slides, prevButton, nextButton, targetIndex);
+});

@@ -1,0 +1,17 @@
+/*Style to apply for Titus Thomas Personal Portfolio*/
+
+/*==========Universal HTML elements styles==========*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quantico", sans-serif;
+    scroll-behavior: smooth;
+}
+
+/*==========Body elements styles==========*/
+body {
+    width: screen;
+    height: screen;
+    background: #000000;
+}
