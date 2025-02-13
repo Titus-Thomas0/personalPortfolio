@@ -46,10 +46,30 @@ body {
     color: var(--clr-Primary);
 }
 
-/*==========Heading elements styles==========*/
+/*==========Heading elements spacing styles==========*/
 h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 5px;
+}
+
+/*==========Heading elements font size styles==========*/
+h1 {
+    font-size: var(--size-xl);
+}
+
+h2 {
     font-size: var(--size-lg);
-    letter-spacing: 10px;
+}
+
+h3 {
+    font-size: var(--size-base);
+}
+
+h4 {
+    font-size: var(--size-small);
+}
+
+h5 {
+    font-size: var(--size-xs);
 }
 
 /*==========Media elements styles==========*/
@@ -95,17 +115,18 @@ a:hover {
     color: var(--clr-Secondary);
 }
 
-ul {
-    list-style: none;
+/*==========strong elements styles==========*/
+strong {
+    font-size: var(--size-lg);
 }
 
 /*==========Content class styles==========*/
 .Content {
     width: 100%;
-    /* margin-left: auto;
-    margin-left: auto; */
-    /* padding-left: 0.5rem;
-    padding-right: 0.5rem; */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     border: 1px solid red;
 }
 
@@ -115,15 +136,23 @@ ul {
 }
 
 /*==========Nav elements styles==========*/
-nav {
+header {
     position: fixed;
-    display: flex;
-    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     height: 3rem;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     border-bottom: 2px solid var(--clr-BG-lite);
     z-index: 999;
+}
+
+/*==========Nav elements styles==========*/
+nav {
+    display: flex;
+    align-items: center;
 }
 
 /*==========Menu Icon styles==========*/
@@ -219,11 +248,6 @@ nav {
     color: var(--clr-Secondary);
 }
 
-/*==========logoText class h1 styles==========*/
-.logoText h1 {
-    letter-spacing: 5px;
-}
-
 /*==========logoText class span styles==========*/
 .logoText span {
     color: var(--clr-Primary);
@@ -237,8 +261,142 @@ nav {
     }
 }
 
+/*==========navList class styles==========*/
 .navList {
     color: var(--clr-Primary);
+}
+
+/*==========Home section styles==========*/
+#Home {
+    height: 100dvh;
+    position: relative;
+    text-align: center;
+    background: url(assets/images/Background\ Images/Certificate\ Background.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*==========Home section intro styles==========*/
+#Home #intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.5rem;
+    width: max-content;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.082);
+    color: var(--clr-Secondary);
+}
+
+/*==========Home section intro headings styles==========*/
+#Home #intro h1 {
+    display: block;
+    font-size: var(--size-xl);
+}
+
+#Home #intro h4 {
+    font-size: var(--size-base);
+}
+
+/*==========Home section intro span styles==========*/
+#Home #intro span {
+    color: var(--clr-Primary);
+}
+
+/*==========Roles span styles==========*/
+#Roles span {
+    display: block;
+    font-size: var(--size-xs);
+}
+
+/*==========Styles to create | symbol before every role==========*/
+#Home #Roles span::before {
+    content: '|';
+    padding: 0 3px 0 0;
+    display: inline-block;
+    color: #FFFFFF;
+}
+
+/*==========Styles to create | symbol after every role==========*/
+#Home #Roles span::after {
+    content: '|';
+    padding: 0 0 0 3px;
+    display: inline-block;
+    color: #FFFFFF;
+}
+
+#socials {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#socials ul {
+    float: right;
+    display: flex;
+    width: max-content;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#socials li {
+    display: block;
+    list-style-type: none;
+    cursor: pointer;
+    padding: 0.5em;
+}
+
+#socials ul li a {
+    border-radius: 50%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+}
+
+.icon {
+    height: 50px;
+    width: 50px;
+}
+
+#linkedin, #github{
+    background: #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255, 1);
+}
+
+#linkedin:hover {
+    background: #007ab9;
+    box-shadow: 0px 0px 10px rgba(0, 122, 185, 1);
+}
+
+#github:hover {
+    background: #444444;
+    box-shadow: 0px 0px 10px rgba(68, 68, 68, 5);
+}
+
+#credly, #codedex{
+    background: #000000;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+}
+
+#credly:hover {
+    background: #3b9e62;
+    box-shadow: 0px 0px 10px rgba(59, 158, 98, 5);
+}
+
+#codedex:hover {
+    background: #ffee39;
+    box-shadow: 0px 0px 10px rgba(255, 238, 57, 5);
 }
 
 /*==========Media Query==========*/
@@ -250,17 +408,66 @@ nav {
         max-width: 475px;
     }
 
-    /*==========logoText class h1 styles==========*/
-    .logoText h1 {
-        letter-spacing: 10px;
+    /*==========Home section intro headings styles==========*/
+    #Home #intro h1 {
+        font-size: var(--size-4xl);
+    }
+ 
+     #Home #intro h4 {
+         font-size: var(--size-2xl);
+    }
+ 
+     /*==========Roles span styles==========*/
+     #Roles span {
+         font-size: var(--size-base);
     }
 }
 
 /*==========Small Media Query==========*/
 @media screen and (min-width: 640px) {
+    /*==========logoText class h1 styles==========*/
+    .logoText h1 {
+        letter-spacing: 10px;
+    } 
+
+    /*==========Heading elements font size styles==========*/
+    h1 {
+        font-size: var(--size-2xl);
+    }
+
+    h2 {
+        font-size: var(--size-xl);
+    }
+
+    h3 {
+        font-size: var(--size-lg);
+    }
+
+    h4 {
+        font-size: var(--size-base);
+    }
+
+    h5 {
+        font-size: var(--size-small);
+    }
+
     /*==========Content class styles==========*/
     .Content {
         max-width: 640px;
+    }
+
+    /*==========Home section intro headings styles==========*/
+    #Home #intro h1 {
+        font-size: var(--size-5xl);
+    }
+ 
+     #Home #intro h4 {
+         font-size: var(--size-3xl);
+    }
+ 
+     /*==========Roles span styles==========*/
+     #Roles span {
+         font-size: var(--size-lg);
     }
 }
 
@@ -270,10 +477,74 @@ nav {
     .Content {
         max-width: 768px;
     }
+
+    /*==========Roles span styles==========*/
+    #Roles span {
+        display: inline-block;
+    }
+
+    /*==========Styles to create | symbol before every role==========*/
+    #Home #Roles span::before {
+        content: '';
+        padding: 0 5px 0 0;
+        display: inline-block;
+        color: #FFFFFF;
+    }
+
+    /*==========Styles to create | symbol before first role==========*/
+    #Home #Roles span:first-child::before {
+        content: '|';
+        padding: 0 5px 0 0;
+        display: inline-block;
+        color: #FFFFFF;
+    }
+
+    /*==========Styles to create | symbol after every role==========*/
+    #Home #Roles span::after {
+        content: '|';
+        padding: 0 0 0 5px;
+        display: inline-block;
+        color: #FFFFFF;
+    }
+
+    /*==========Home section intro headings styles==========*/
+    #Home #intro h1 {
+        font-size: var(--size-6xl);
+    }
+ 
+     #Home #intro h4 {
+         font-size: var(--size-4xl);
+    }
+ 
+     /*==========Roles span styles==========*/
+     #Roles span {
+         font-size: var(--size-lg);
+    }
 }
 
 /*==========Large Media Query==========*/
 @media screen and (min-width: 1024px) {
+    /*==========Heading elements font size styles==========*/
+    h1 {
+        font-size: var(--size-3xl);
+    }
+
+    h2 {
+        font-size: var(--size-2xl);
+    }
+
+    h3 {
+        font-size: var(--size-xl);
+    }
+
+    h4 {
+        font-size: var(--size-lg);
+    }
+
+    h5 {
+        font-size: var(--size-base);
+    }
+    
     /*==========Content class styles==========*/
     .Content {
         max-width: 1024px;
@@ -299,7 +570,7 @@ nav {
     /*==========Navigation link styles==========*/
     .navList {
         text-decoration: none;
-        padding: 12px 1rem;
+        padding: 6px 1rem;
         transition: color 0.3s;
     }
 
@@ -316,6 +587,20 @@ nav {
     /*==========Menu Icon styles==========*/
     #menuIcon {
         display: none;
+    }
+
+    /*==========Home section intro headings styles==========*/
+    #Home #intro h1 {
+        font-size: var(--size-7xl);
+    }
+ 
+     #Home #intro h4 {
+         font-size: var(--size-5xl);
+    }
+ 
+     /*==========Roles span styles==========*/
+     #Roles span {
+         font-size: var(--size-xl);
     }
 }
 

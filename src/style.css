@@ -250,7 +250,7 @@ nav ul li {
     background-color: var(--accent-color);
     color: #000000;
     text-decoration: none;
-    padding: 0.5em 1em;
+    padding: 0.5rem 1rem;
     border-radius: 100px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
     transform: translateY(-30px) rotate(25deg);

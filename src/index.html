@@ -18,7 +18,7 @@
     <!--==========Header==========-->
     <Header id="navigationBar">
         <!--==========Navigation Bar==========-->
-        <nav>
+        <nav class="Content">
             <!--==========Menu Icon==========-->
             <div id="menuIcon"> <!--This div is used to create a menu icon using css-->
                 <span></span> <!--child-1-->
@@ -42,7 +42,52 @@
         </nav>
     </Header>
 
-   
+     <!--==========main==========-->
+    <main>
+        <!--==========section-1 Home==========-->
+        <section id="Home">
+            <div class="Content">
+                <!--==========My intro to this world==========-->
+                <div id="intro">
+                    <h4 id="greetings"></h4> <!--==========Welcome note to visitors==========-->
+                    <audio autoplay> <!--==========Audio used for the welcome note==========-->
+                        <source src="assets/soundEffects/Keyboard Typing.mp3" type="audio/mpeg">
+                    </audio>
+                    <h1>I am <span>Titus Thomas</span>.</h1> <!--==========My Name==========-->
+                    <p id="Roles">
+                        <span>Fullstack Developer</span> <!--==========My Role==========-->
+                        <span>LabVIEW Developer</span> <!--==========My Role==========-->
+                    </p>
+                </div>
+
+                <!--==========My socials link==========-->
+                <div id="socials">
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/in/titus-thomas-61a909149/" target="_blank"> <!--==========Linkedin link==========-->
+                                <img src="assets/images/Socials Logos/linkedin.png" alt="Linkedin" id="linkedin" class="icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Titus-Thomas0" target="_blank"> <!--==========Github link==========-->
+                            <img src="assets/images/Socials Logos/github.png" alt="Github" id="github" class="icon">
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="https://www.credly.com/users/titus-thomas.02668ef2" target="_blank"> <!--==========Credly link==========-->
+                                <img src="assets/images/Socials Logos/Credly.png" alt="Credly" id="credly" class="icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.codedex.io/@titus-thomas" target="_blank"> <!--==========Codedex link==========-->
+                                <img src="assets/images/Socials Logos/codedexlogo.png" alt="Codedex" id="codedex" class="icon">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
     <script src="script.js"></script> <!--Linked the script.js file here-->
 </body>
 </html>
