@@ -399,6 +399,183 @@ nav {
     box-shadow: 0px 0px 10px rgba(255, 238, 57, 5);
 }
 
+/* .Sub-Content {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+}
+
+.Heading {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.Heading h2 {
+    color: var(--clr-Secondary);
+}
+
+.Heading h3 {
+    color: var(--clr-Comments);
+
+}
+
+.Heading h3 span {
+    color: var(--clr-Primary);
+} */
+
+/*==========AboutMe Section==========*/
+/* .Left_Row {
+    margin-top: 0.5rem;
+}
+
+.Left_Row img {
+    border-radius: 5%;
+}
+
+.Right_Row {
+    word-spacing: 5px;
+}
+
+.Right_Row p {
+    margin-top: 1rem;
+}
+
+.Right_Row p .tab {
+    display: inline-block;
+    margin-left: 2em;
+}
+
+.Right_Row p, .Right_Row span {
+    font-size: var(--size-xs);
+    line-height: 1rem;
+}
+
+.Right_Row p span {
+    color: var(--clr-Secondary);
+}
+
+.Sub-Content h3 {
+    color: var(--clr-Secondary);
+    margin-top: 1rem;
+}
+
+#Personal_Details {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Personal_Details ul li {
+    list-style: none;
+}
+
+#segments, strong {
+    font-size: var(--size-small);
+    line-height: 1rem;
+    color: var(--clr-Comments);
+}
+
+#values {
+    margin-left: 2rem;
+    font-size: var(--size-small);
+    color: var(--clr-Primary);
+}
+
+#values li::before {
+    content: ': ';
+    color: var(--clr-Comments);
+}
+
+#values a {
+    text-decoration: none;
+    color: var(--clr-Primary);
+}
+
+#values a:hover {
+    text-decoration: underline;
+}
+
+.Progress_Bar {
+    margin-top: 15px;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    background: var(--clr-Comments);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.Progress_Text {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: start;
+    left: 5px;
+    color: var(--clr-Primary);
+    font-weight: bold;
+}
+
+.Progress_Percent {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: end;
+    right: 5px;
+    color: var(--clr-Primary);
+    font-weight: bold;
+}
+
+.Progress_Fill {
+    display: flex;
+    align-items: center;
+    background: var(--clr-Secondary);
+    height: 100%;
+    width: var(--data-fill);
+    animation: fill 2s ease-in-out;
+}
+
+@keyframes fill {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: var(--data-fill);
+    }
+}
+
+.Button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.Button a {
+    display: inline-block;
+    position: relative;
+    background: transparent;
+    text-decoration: none;
+    color: var(--clr-Secondary);
+    font-size: var(--size-2xl);
+    letter-spacing: 0.3rem;
+    height: 5rem;
+    line-height: 4.5rem;
+    width: 100%;
+    padding: 0rem 3rem;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px solid var(--clr-Secondary);
+    cursor: pointer;
+}
+
+.Button a:hover {
+    background-color: var(--clr-Secondary);
+    color: var(--clr-Primary);
+    font-weight: bold;
+} */
+
 /*==========Media Query==========*/
 
 /*==========XS Media Query==========*/
@@ -413,14 +590,19 @@ nav {
         font-size: var(--size-4xl);
     }
  
-     #Home #intro h4 {
-         font-size: var(--size-2xl);
+    #Home #intro h4 {
+        font-size: var(--size-2xl);
     }
  
-     /*==========Roles span styles==========*/
-     #Roles span {
-         font-size: var(--size-base);
+    /*==========Roles span styles==========*/
+    #Roles span {
+        font-size: var(--size-base);
     }
+
+    /* .Right_Row p, .Right_Row span {
+        font-size: var(--size-small);
+        line-height: 1.5rem;
+    } */
 }
 
 /*==========Small Media Query==========*/
@@ -461,18 +643,44 @@ nav {
         font-size: var(--size-5xl);
     }
  
-     #Home #intro h4 {
-         font-size: var(--size-3xl);
+    #Home #intro h4 {
+        font-size: var(--size-3xl);
     }
  
-     /*==========Roles span styles==========*/
-     #Roles span {
-         font-size: var(--size-lg);
+    /*==========Roles span styles==========*/
+    #Roles span {
+        font-size: var(--size-lg);
     }
+
+    /* .Left_Row {
+        display: flex;
+        justify-content: center;
+    } */
 }
 
 /*==========Medium Media Query==========*/
 @media screen and (min-width: 768px) {
+    /*==========Heading elements font size styles==========*/
+    h1 {
+        font-size: var(--size-3xl);
+    }
+
+    h2 {
+        font-size: var(--size-2xl);
+    }
+
+    h3 {
+        font-size: var(--size-xl);
+    }
+
+    h4 {
+        font-size: var(--size-lg);
+    }
+
+    h5 {
+        font-size: var(--size-base);
+    }
+
     /*==========Content class styles==========*/
     .Content {
         max-width: 768px;
@@ -512,39 +720,26 @@ nav {
         font-size: var(--size-6xl);
     }
  
-     #Home #intro h4 {
-         font-size: var(--size-4xl);
+    #Home #intro h4 {
+        font-size: var(--size-4xl);
     }
  
-     /*==========Roles span styles==========*/
-     #Roles span {
-         font-size: var(--size-lg);
+    /*==========Roles span styles==========*/
+    #Roles span {
+        font-size: var(--size-lg);
     }
+
+    /* .Right_Row p, .Right_Row span {
+        font-size: var(--size-lg);
+    }
+
+    #segments, strong {
+        font-size: var(--size-base);
+    } */
 }
 
 /*==========Large Media Query==========*/
 @media screen and (min-width: 1024px) {
-    /*==========Heading elements font size styles==========*/
-    h1 {
-        font-size: var(--size-3xl);
-    }
-
-    h2 {
-        font-size: var(--size-2xl);
-    }
-
-    h3 {
-        font-size: var(--size-xl);
-    }
-
-    h4 {
-        font-size: var(--size-lg);
-    }
-
-    h5 {
-        font-size: var(--size-base);
-    }
-    
     /*==========Content class styles==========*/
     .Content {
         max-width: 1024px;
@@ -594,14 +789,54 @@ nav {
         font-size: var(--size-7xl);
     }
  
-     #Home #intro h4 {
-         font-size: var(--size-5xl);
+    #Home #intro h4 {
+        font-size: var(--size-5xl);
     }
  
-     /*==========Roles span styles==========*/
-     #Roles span {
-         font-size: var(--size-xl);
+    /*==========Roles span styles==========*/
+    #Roles span {
+        font-size: var(--size-xl);
     }
+
+    /* .Subject{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .Left_Row {
+        display: block;
+        width: 50%;
+    }
+
+    .Right_Row {
+        display: block;
+        width: 50%;
+    }
+
+    .Bar_Chart {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .Progress_Bar {
+        width: 30rem;
+    }
+
+    .Left_Row {
+        margin-right: 1.5rem;
+    }
+
+    .Left_Row img {
+        height: 100%;
+    }
+
+    .Right_Row p, .Right_Row span {
+        font-size: var(--size-small);
+    }
+
+    #segments, strong {
+        font-size: var(--size-base);
+    } */
 }
 
 /*==========XL Media Query==========*/
@@ -610,6 +845,11 @@ nav {
     .Content {
         max-width: 1280px;
     }
+
+    /* .Sub-Content {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    } */
 }
 
 /*==========2XL Media Query==========*/
@@ -618,4 +858,9 @@ nav {
     .Content {
         max-width: 1536px;
     }
+
+    /* .Sub-Content {
+        margin-left: 10rem;
+        margin-right: 10rem;
+    } */
 }
