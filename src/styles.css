@@ -120,6 +120,10 @@ strong {
     font-size: var(--size-lg);
 }
 
+ul {
+    list-style: none;
+}
+
 /*==========Content class styles==========*/
 .Content {
     width: 100%;
