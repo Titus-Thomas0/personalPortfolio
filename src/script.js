@@ -106,15 +106,18 @@ const closeButton1 = document.getElementById("closeButton1");
 
 seeMore1.onclick = () => {
     project1Model.showModal();
+    document.body.style.overflowY = 'hidden';
 }
 
 closeButton1.onclick = () => {
     project1Model.close();
+    document.body.style.overflowY = 'auto';
 }
 
 project1Model.addEventListener("click", (e) => {
     if(!modalWrapper1.contains(e.target)) {
         project1Model.close();
+        document.body.style.overflowY = 'auto';
     }
 });
 
@@ -129,15 +132,18 @@ const closeButton2 = document.getElementById('closeButton2');
 
 seeMore2.onclick = () => {
     project2Model.showModal();
+    document.body.style.overflowY = 'hidden';
 }
 
 closeButton2.onclick = () => {
     project2Model.close();
+    document.body.style.overflowY = 'auto';
 }
 
 project2Model.addEventListener("click", (e) => {
     if(!modalWrapper2.contains(e.target)) {
         project2Model.close();
+        document.body.style.overflowY = 'auto';
     }
 });
 
@@ -290,4 +296,30 @@ navIndicator.addEventListener('click', e => {
     //hide and arrow buttons
 
     hideShowArrow(slides, prevButton, nextButton, targetIndex);
+});
+
+
+
+//==========JavaScript for showing Appearance setting in model==========
+
+const appearanceSetting = document.getElementById('appearanceSetting');
+const modeSetting = document.getElementById("modeSetting");
+const settingWrapper = document.getElementById("settingWrapper")
+const exitIcon = document.getElementById("exitIcon");
+
+appearanceSetting.onclick = () => {
+    modeSetting.showModal();
+    document.body.style.overflowY = 'hidden';
+}
+
+exitIcon.onclick = () => {
+    modeSetting.close();
+    document.body.style.overflowY = 'auto';
+}
+
+modeSetting.addEventListener("click", (e) => {
+    if(!settingWrapper.contains(e.target)) {
+        modeSetting.close();
+        document.body.style.overflowY = 'auto';
+    }
 });

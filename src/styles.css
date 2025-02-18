@@ -47,6 +47,10 @@ body {
     color: var(--clr-Primary);
 }
 
+body.noScroll {
+    overflow: hidden;
+}
+
 /*==========Heading elements spacing styles==========*/
 h1, h2, h3, h4, h5, h6 {
     letter-spacing: 5px;
@@ -261,9 +265,10 @@ nav {
 /*==========logoText class hovering styles==========*/
 .logoText:hover {
     color: var(--clr-Primary);
-    span {
-        color: var(--clr-Secondary);
-    }
+}
+
+.logoText:hover span {
+    color: var(--clr-Secondary);
 }
 
 /*==========navList class styles==========*/
@@ -853,6 +858,476 @@ nav {
 }
 
 /*==========Certificates Section==========*/
+#Certificates {
+    position: relative;
+}
+
+.Carousel {
+    position: relative;
+    height: 70dvh;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.Carousal-Container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.Carousal-Tracker {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+}
+
+.Carousal-Slide {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.Carousal-Image {
+    width: 100%;
+    background: var(--clr-BG-lite);
+    object-fit: fill;
+}
+
+.carousalText {
+    position: absolute;
+    text-align: center;
+    color: var(--clr-Secondary);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+}
+
+.carousalCaption {
+    display: none;
+}
+
+.carousalCaption small {
+    color: var(--clr-Comments);
+    letter-spacing: 5px;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.125rem;
+}
+
+.carousalCaption.current-slide {
+    display: inline-block;
+}
+
+.carouselButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: transparent;
+}
+
+.carouselButton:hover {
+    background: transparent;
+    border: transparent;
+}
+
+.carouselButton-Left {
+    left: 20px;
+}
+
+.carouselButton-Right {
+    right: 20px;
+}
+
+.slideArrows {
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.slideArrows:hover {
+    color: var(--clr-Primary);
+}
+
+.carousalNav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -45px;
+}
+
+.Carousel-Indicator {
+    border: 0;
+    border-radius: 10px;
+    height: 5px;
+    width: 40px;
+    display: inline-flex;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 0.125rem;
+    cursor: pointer;
+}
+
+.Carousel-Indicator:hover {
+    background: rgba(255, 255, 255, 0.5);
+    border: transparent;
+}
+
+.Carousel-Indicator.current-slide {
+    background: var(--clr-Primary);
+}
+
+.is-hidden {
+    display: none;
+}
+
+/*==========Service Section==========*/
+
+/*==========Connect Section==========*/
+#Connect {
+    position: relative;
+    color: var(--clr-Secondary);
+    width: 100%;
+    max-height: max-content;
+}
+
+.Form-Container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+fieldset {
+    border: transparent;
+}
+
+.form-field {
+    position: relative;
+    margin: 20px 0;
+}
+
+.form-field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: var(--clr-Comments);
+    padding: 0 5px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.form-field .connectMessage-label {
+    top: 5%;
+}
+
+.form-field input {
+    width: 100%;
+    height: 40px;
+    color: var(--clr-Secondary);
+    padding: 0 10px;
+    background: transparent;
+    border: 2px solid var(--clr-Comments);
+    outline: none;
+    border-radius: 5px;
+}
+
+.form-field input:hover {
+    border: 2px solid var(--clr-Secondary);
+}
+
+.form-field textarea {
+    width: 100%;
+    height: 100%;
+    color: var(--clr-Secondary);
+    padding: 0 10px;
+    background: transparent;
+    border: 2px solid var(--clr-Comments);
+    outline: none;
+    border-radius: 5px;
+}
+
+.form-field textarea:hover {
+    border: 2px solid var(--clr-Secondary);
+}
+
+.form-field button {
+    width: 100%;
+    height: 100%;
+    color: var(--clr-Comments);
+    font-size: var(--size-2xl);
+    padding: 10px 10px;
+    background: transparent;
+    border: 2px solid var(--clr-Comments);
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+    letter-spacing: 5px;
+}
+
+.form-field input:not(:placeholder-shown)~label,
+.form-field textarea:not(:placeholder-shown)~label {
+    top: 0;
+    font-family: 12px;
+    background: var(--clr-BG);
+    color: var(--clr-Comments);
+}
+
+.form-field input:focus,
+.form-field input:valid,
+.form-field textarea:focus,
+.form-field textarea:valid {
+    border: 2px solid var(--clr-Secondary);
+}
+
+.form-field input:focus~label,
+.form-field input:valid~label,
+.form-field textarea:focus~label,
+.form-field textarea:valid~label {
+    top: 0;
+    font-family: 12px;
+    background: var(--clr-BG);
+    color: var(--clr-Secondary);
+}
+
+.form-field button:hover {
+    background: var(--clr-Secondary);
+    border: 2px solid var(--clr-Secondary);
+    color: var(--clr-Primary);
+    font-weight: bolder;
+}
+
+/*==========Footer Section==========*/
+
+footer {
+    position: relative;
+    color: var(--clr-Secondary);
+    padding: 10px 0px;
+    max-height: max-content;
+}
+
+.upArrow {
+    position: absolute;
+    top: -17%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: ease-out 0.5s;
+}
+
+.upArrow .doubleUpArrow {
+    color: var(--clr-Comments);
+    font-size: 50px;
+    margin: 30px 30px 0px 30px;
+    padding: 30px 30px 0px 30px;
+    background: var(--clr-base);
+    border-radius: 100px 100px 0px 0px;
+    transition: ease-out 0.5s;
+}
+
+.upArrow .doubleUpArrow:hover {
+    margin: 5px 30px 30px 30px;
+    padding: 5px 30px 30px 30px;
+    bottom: 10px;
+    color: var(--clr-Primary);
+}
+
+footer .Content{
+    position: relative;
+    background: var(--clr-base);
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px 10px;
+}
+
+.footerRow {
+    padding: 10px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerRow .logo {
+    margin: 0;
+}
+
+.footerRow p {
+    color: var(--clr-Comments);
+}
+
+.footerRow button {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 5px 10px;
+    background: transparent;
+    color: var(--clr-Comments);
+    cursor: pointer;
+    border: 2px solid var(--clr-Comments);
+    border-radius: 10px;
+}
+
+.footerRow button .mode {
+    margin-right: 5px;
+}
+
+.footerRow button:hover {
+    border: 2px solid var(--clr-Secondary) ;
+    color: var(--clr-Secondary);
+}
+
+#modeSetting {
+    width: max-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid var(--clr-Secondary);
+    background: var(--clr-BG);
+}
+
+#modeSetting::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#settingWrapper {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modeSetting-header {
+    color: var(--clr-Secondary);
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 2px solid var(--clr-Secondary);
+}
+
+.modeSetting-header h4 {
+    display: inline-block;
+    letter-spacing: 0.25rem;
+}
+
+#exitIcon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    display: flex;
+    margin-left: 1rem;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+#exitIcon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: var(--clr-Secondary);
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+/*==========Exit Icon => Span child 1 position styles==========*/
+#exitIcon span:nth-child(1) {
+    top: 10px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+/*==========Exit Icon => Span child 2 position styles==========*/
+#exitIcon span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+/*==========Exit Icon => Span child 3 position styles==========*/
+#exitIcon span:nth-child(3) {
+    top: 10px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+#modeSetting button {
+    margin: 0.5rem;
+}
+
+.index ul li a {
+    text-decoration: none;
+    padding: 0 20px 0 0;
+    color: var(--clr-Comments);
+}
+
+.index ul li a:hover {
+    color: var(--clr-Secondary);
+    font-weight: bold;
+}
+
+.socialMedia ul {
+    position: relative;
+    display: flex;
+    list-style: none;
+}
+
+.socialMedia ul li a {
+    position: relative;
+    display: flex;
+    padding: 0 0 0 20px;
+    margin: 0;
+}
+
+.socialMedia ul li a svg {
+    fill: var(--clr-Comments);
+}
+
+.socialMedia ul li a .st0 {
+    stroke: var(--clr-Comments);
+}
+
+.socialMedia ul li a svg:hover {
+    fill: var(--accent-color);
+}
+
+.socialMedia ul li a:hover .st0{
+    stroke: #C71610;
+}
+
+.copyrights {
+    color: var(--clr-Comments);
+    text-align: center;
+}
+
+.copyrights small {
+    display: inline-block;
+}
+
 
 /*==========Media Query==========*/
 
@@ -889,6 +1364,14 @@ nav {
 
     .Project-Details::before {
         top: 419px;
+    }
+
+    .carousalText {
+        bottom: -35px;
+    }
+
+    .carousalNav {
+        bottom: -70px;
     }
 }
 
@@ -963,6 +1446,31 @@ nav {
         border-bottom: 15px solid transparent;
         border-right: 15px solid var(--clr-Primary);
         left: 171px;
+    }
+
+    .Project-model {
+        width: 80%;
+    }
+
+    .carousalText {
+        bottom: 75px;
+    }
+
+    .carousalNav {
+        bottom: 25px;
+    }
+
+    .Carousel-Indicator {
+        background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .Carousel-Indicator:hover {
+        background: rgba(0, 0, 0, 0.5);
+        border: transparent;
+    }
+    
+    .Carousel-Indicator.current-slide {
+        background: var(--clr-BG);
     }
 }
 
@@ -1081,6 +1589,27 @@ nav {
         left: initial;
         right: -14px;
     }
+
+    .Carousal-Image {
+        height: 70dvh;
+        width: 80%;
+    }
+
+    .carousalText {
+        bottom: 60px;
+    }
+
+    .carouselButton-Left {
+        left: 90px;
+    }
+    
+    .carouselButton-Right {
+        right: 90px;
+    }
+
+    .carousalNav {
+        bottom: 5px;
+    }
 }
 
 /*==========Large Media Query==========*/
@@ -1190,6 +1719,44 @@ nav {
     .text-box {
         padding: 1.5rem 1.5rem;
     }
+
+    .Project-model {
+        width: 50%;
+    }
+
+    .carousalText {
+        bottom: 75px;
+    }
+
+    .carouselButton-Left {
+        left: 125px;
+    }
+    
+    .carouselButton-Right {
+        right: 125px;
+    }
+
+    .carousalNav {
+        bottom: 5px;
+    }
+
+    .upArrow {
+        position: absolute;
+        top: -40%;
+    }
+
+    .footerRow {
+        padding: 10px 0 0 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .index ul {
+        position: relative;
+        display: flex;
+    }
 }
 
 /*==========XL Media Query==========*/
@@ -1203,6 +1770,22 @@ nav {
         margin-left: 5rem;
         margin-right: 5rem;
     }
+
+    .carousalText {
+        bottom: 75px;
+    }
+
+    .carouselButton-Left {
+        left: 130px;
+    }
+    
+    .carouselButton-Right {
+        right: 130px;
+    }
+
+    .carousalNav {
+        bottom: 5px;
+    }
 }
 
 /*==========2XL Media Query==========*/
@@ -1215,5 +1798,21 @@ nav {
     .Sub-Content {
         margin-left: 10rem;
         margin-right: 10rem;
+    }
+
+    .carousalText {
+        bottom: 75px;
+    }
+
+    .carouselButton-Left {
+        left: 150px;
+    }
+    
+    .carouselButton-Right {
+        right: 150px;
+    }
+
+    .carousalNav {
+        bottom: 5px;
     }
 }
