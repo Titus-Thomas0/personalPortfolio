@@ -218,7 +218,7 @@ prevButton.addEventListener('click', e => {
     const prevSlide = currentSlide.previousElementSibling;
     const currentIndicator = navIndicator.querySelector('.current-slide');
     const prevIndicator = currentIndicator.previousElementSibling;
-    const currentCaption = text.querySelector('.current-slide')
+    const currentCaption = text.querySelector('.current-slide');
     const prevCaption = currentCaption.previousElementSibling;
     const prevIndex = slides.findIndex(slide => slide === prevSlide);
 
@@ -246,7 +246,7 @@ nextButton.addEventListener('click', e => {
     const nextSlide = currentSlide.nextElementSibling;
     const currentIndicator = navIndicator.querySelector('.current-slide');
     const nextIndicator = currentIndicator.nextElementSibling;
-    const currentCaption = text.querySelector('.current-slide')
+    const currentCaption = text.querySelector('.current-slide');
     const nextCaption = currentCaption.nextElementSibling;
     const nextIndex = slides.findIndex(slide => slide === nextSlide);
 
@@ -278,7 +278,7 @@ navIndicator.addEventListener('click', e => {
     const currentIndicator = navIndicator.querySelector('.current-slide');
     const targetIndex = indicators.findIndex(indicator => indicator === targetIndicator);
     const targetSlide = slides[targetIndex];
-    const currentCaption = text.querySelector('.current-slide')
+    const currentCaption = text.querySelector('.current-slide');
     const targetCaption = captions[targetIndex];
 
     //Move to target slide
@@ -296,30 +296,4 @@ navIndicator.addEventListener('click', e => {
     //hide and arrow buttons
 
     hideShowArrow(slides, prevButton, nextButton, targetIndex);
-});
-
-
-
-//==========JavaScript for showing Appearance setting in model==========
-
-const appearanceSetting = document.getElementById('appearanceSetting');
-const modeSetting = document.getElementById("modeSetting");
-const settingWrapper = document.getElementById("settingWrapper")
-const exitIcon = document.getElementById("exitIcon");
-
-appearanceSetting.onclick = () => {
-    modeSetting.showModal();
-    document.body.style.overflowY = 'hidden';
-}
-
-exitIcon.onclick = () => {
-    modeSetting.close();
-    document.body.style.overflowY = 'auto';
-}
-
-modeSetting.addEventListener("click", (e) => {
-    if(!settingWrapper.contains(e.target)) {
-        modeSetting.close();
-        document.body.style.overflowY = 'auto';
-    }
 });

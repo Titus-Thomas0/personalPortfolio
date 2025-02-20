@@ -1,5 +1,9 @@
 /*Style to apply for Titus Thomas Personal Portfolio*/
 
+html {
+    color-scheme: dark light;
+}
+
 /*==========Universal HTML elements styles==========*/
 * {
     margin: 0;
@@ -8,19 +12,10 @@
     font-family: "Quantico", sans-serif;
     line-height: calc(1em + 1.5rem);
     scroll-behavior: smooth;
-    
 }
 
 /*==========root elements styles==========*/
 :root {
-    /*==========declaring color variables==========*/
-    --clr-BG: #000000;
-    --clr-Primary: #FFFFFF;
-    --clr-Secondary: #B4121B;
-    --clr-base: #111111;
-    --clr-BG-lite: #262626;
-    --clr-Comments: #444444;
-
     /*==========declaring font size variables==========*/
     --size-xxs: 0.5rem;
     --size-xs: 0.75rem;
@@ -39,16 +34,46 @@
     --size-10xl: 10rem;
 }
 
+/*==========declaring dark-mode color variables==========*/
+:root:has(#theme [value="System"]:checked) {
+    color-scheme: dark;
+    color-scheme: ;
+    --clr-BG: #000000;
+    --clr-Primary: #FFFFFF;
+    --clr-Secondary: #B4121B;
+    --clr-base: #111111;
+    --clr-BG-lite: #262626;
+    --clr-Comments: #444444;
+}
+
+/*==========declaring dark-mode color variables==========*/
+:root:has(#theme [value="Dark"]:checked) {
+    color-scheme: dark;
+    --clr-BG: #000000;
+    --clr-Primary: #FFFFFF;
+    --clr-Secondary: #B4121B;
+    --clr-base: #111111;
+    --clr-BG-lite: #262626;
+    --clr-Comments: #444444;
+}
+
+/*==========declaring light-mode color variables==========*/
+:root:has(#theme [value="Light"]:checked) {
+    color-scheme: light;
+    --clr-BG: #FFFFFF;
+    --clr-Primary: #000000;
+    --clr-Secondary: #B4121B;
+    --clr-base: #111111;
+    --clr-BG-lite: #262626;
+    --clr-Comments: #444444;
+}
+
 /*==========Body elements styles==========*/
 body {
     width: 100dvw;
     height: 100dvh;
     background: var(--clr-BG);
     color: var(--clr-Primary);
-}
-
-body.noScroll {
-    overflow: hidden;
 }
 
 /*==========Heading elements spacing styles==========*/
@@ -131,12 +156,11 @@ ul {
 
 /*==========Content class styles==========*/
 .Content {
-    width: 100%;
+    width: auto;
     margin-left: auto;
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    border: 1px solid red;
 }
 
 /*==========Page class styles==========*/
@@ -153,15 +177,20 @@ header {
     left: 0;
     height: 3rem;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: var(--clr-BG);
     border-bottom: 2px solid var(--clr-BG-lite);
     z-index: 999;
 }
 
 /*==========Nav elements styles==========*/
 nav {
+    display: block;
+}
+
+.onDisplay {
     display: flex;
     align-items: center;
+
 }
 
 /*==========Menu Icon styles==========*/
@@ -243,7 +272,16 @@ nav {
 
 /*==========Navigation bar styles==========*/
 #navItem {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    width: 50%;
+    background: var(--clr-BG);
+    overflow: hidden;
 }
 
 /*==========logo class styles==========*/
@@ -274,6 +312,16 @@ nav {
 /*==========navList class styles==========*/
 .navList {
     color: var(--clr-Primary);
+}
+
+.navList:hover {
+    color: var(--clr-Secondary);
+}
+
+.navList.active {
+    color: var(--clr-Secondary);
+    font-weight: bold;
+    border-bottom: 3px solid var(--clr-Secondary);
 }
 
 /*==========Home section styles==========*/
@@ -1336,6 +1384,7 @@ footer .Content{
     /*==========Content class styles==========*/
     .Content {
         max-width: 475px;
+        width: auto;
     }
 
     /*==========Home section intro headings styles==========*/
@@ -1406,6 +1455,7 @@ footer .Content{
     /*==========Content class styles==========*/
     .Content {
         max-width: 640px;
+        width: auto;
     }
 
     /*==========Home section intro headings styles==========*/
@@ -1500,6 +1550,7 @@ footer .Content{
     /*==========Content class styles==========*/
     .Content {
         max-width: 768px;
+        width: auto;
     }
 
     /*==========Roles span styles==========*/
@@ -1617,6 +1668,7 @@ footer .Content{
     /*==========Content class styles==========*/
     .Content {
         max-width: 1024px;
+        width: auto;
     }
 
     /*==========Page class styles==========*/
@@ -1627,6 +1679,7 @@ footer .Content{
     nav {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     /*==========Navigation bar styles==========*/
@@ -1636,21 +1689,23 @@ footer .Content{
         list-style: none;
     }
 
+    #navItem {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        justify-content: center;
+        position: relative;
+        top: 0;
+        width: max-content;
+        overflow: visible;
+    }
+
     /*==========Navigation link styles==========*/
     .navList {
         text-decoration: none;
         padding: 6px 1rem;
         transition: color 0.3s;
-    }
-
-    .navList:hover {
-        color: var(--clr-Secondary);
-    }
-
-    .navList.active {
-        color: var(--clr-Secondary);
-        font-weight: bold;
-        border-bottom: 3px solid var(--clr-Secondary);
     }
 
     /*==========Menu Icon styles==========*/
@@ -1764,6 +1819,7 @@ footer .Content{
     /*==========Content class styles==========*/
     .Content {
         max-width: 1280px;
+        width: auto;
     }
 
     .Sub-Content {
@@ -1793,6 +1849,7 @@ footer .Content{
     /*==========Content class styles==========*/
     .Content {
         max-width: 1536px;
+        width: auto;
     }
 
     .Sub-Content {

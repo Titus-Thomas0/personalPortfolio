@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> <!--Linked the font file here-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back_ios,arrow_forward_ios,contrast,dark_mode,keyboard_double_arrow_up,light_mode " />
     <script src="https://kit.fontawesome.com/a92ab7f82e.js" crossorigin="anonymous"></script>
-    <title>Titus Thomas</title>
+    <title>Titus Thomas | Portfolio</title>
     <link rel="icon" href="assets/images/Project Images/PortFolio.png">
     <link rel="stylesheet" href="styles.css"> <!--Linked the style.css file here-->
 </head>
@@ -19,15 +19,17 @@
     <Header id="navigationBar">
         <!--==========Navigation Bar==========-->
         <nav class="Content">
-            <!--==========Menu Icon==========-->
-            <div id="menuIcon"> <!--This div is used to create a menu icon using css-->
-                <span></span> <!--child-1-->
-                <span></span> <!--child-2-->
-                <span></span> <!--child-3-->
-            </div>
-            <!--==========Webpage Logo==========-->
-            <div class="logo">
-                <a class="logoText" href="index.html"><h1>TITUS THOMAS<span>.</span></h1></a> <!--logo text is added here-->
+            <div class="onDisplay">
+                <!--==========Menu Icon==========-->
+                <div id="menuIcon"> <!--This div is used to create a menu icon using css-->
+                    <span></span> <!--child-1-->
+                    <span></span> <!--child-2-->
+                    <span></span> <!--child-3-->
+                </div>
+                <!--==========Webpage Logo==========-->
+                <div class="logo">
+                    <a class="logoText" href="index.html"><h1>TITUS THOMAS<span>.</span></h1></a> <!--logo text is added here-->
+                </div>
             </div>
             <!--==========Navigation Items==========-->
             <ul id="navItem">
@@ -606,10 +608,13 @@
                 </div>
     
                 <div class="Mode">
-                    <button type="button" id="appearanceSetting">
-                        <span class="material-symbols-outlined mode">contrast</span>
-                        Appearance Setting
-                    </button>
+                    <label>Appearance Setting : 
+                        <select name="themePicker" id="theme">
+                            <option value="System">System (Default)</option>
+                            <option value="Dark">Dark</option>
+                            <option value="Light">Light</option>
+                        </select>
+                    </label>
                 </div>
     
                 <dialog id="modeSetting">
