@@ -37,7 +37,6 @@ html {
 /*==========declaring dark-mode color variables==========*/
 :root:has(#theme [value="System"]:checked) {
     color-scheme: dark;
-    color-scheme: ;
     --clr-BG: #000000;
     --clr-Primary: #FFFFFF;
     --clr-Secondary: #B4121B;
@@ -74,6 +73,7 @@ body {
     height: 100dvh;
     background: var(--clr-BG);
     color: var(--clr-Primary);
+    overflow-x: hidden;
 }
 
 /*==========Heading elements spacing styles==========*/
