@@ -34,15 +34,35 @@ html {
     --size-10xl: 10rem;
 }
 
-/*==========declaring dark-mode color variables==========*/
-:root:has(#theme [value="System"]:checked) {
-    color-scheme: dark;
-    --clr-BG: #000000;
-    --clr-Primary: #FFFFFF;
-    --clr-Secondary: #B4121B;
-    --clr-base: #111111;
-    --clr-BG-lite: #262626;
-    --clr-Comments: #444444;
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --clr-BG: #000000;
+        --clr-Primary: #FFFFFF;
+        --clr-Secondary: #B4121B;
+        --clr-base: #111111;
+        --clr-BG-lite: #262626;
+        --clr-Comments: #444444;
+    }
+
+    #Home {
+        background: url(assets/images/Background\ Images/Certificate\ Background.jpg) var(--clr-BG);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --clr-BG: #FFFFFF;
+        --clr-Primary: #000000;
+        --clr-Secondary: #B4121B;
+        --clr-base: #111111;
+        --clr-BG-lite: #262626;
+        --clr-Comments: #444444;
+    }
+
+    #Home {
+        background: url(assets/images/Background\ Images/Main\ Background.jpg) var(--clr-BG);
+    }
 }
 
 /*==========declaring dark-mode color variables==========*/
@@ -54,6 +74,10 @@ html {
     --clr-base: #111111;
     --clr-BG-lite: #262626;
     --clr-Comments: #444444;
+
+    #Home {
+        background: url(assets/images/Background\ Images/Certificate\ Background.jpg) var(--clr-BG);
+    }
 }
 
 /*==========declaring light-mode color variables==========*/
@@ -62,9 +86,13 @@ html {
     --clr-BG: #FFFFFF;
     --clr-Primary: #000000;
     --clr-Secondary: #B4121B;
-    --clr-base: #111111;
-    --clr-BG-lite: #262626;
-    --clr-Comments: #444444;
+    --clr-base: #EEEEEE;
+    --clr-BG-lite: #D9D9D9;
+    --clr-Comments: #BBBBBB;
+
+    #Home {
+        background: url(assets/images/Background\ Images/Main\ Background.jpg) var(--clr-BG);
+    }
 }
 
 /*==========Body elements styles==========*/
@@ -166,6 +194,7 @@ ul {
 /*==========Page class styles==========*/
 .Page {
     margin-top: 5rem;
+    padding-top: 1px;
 }
 
 /*==========Nav elements styles==========*/
@@ -329,7 +358,7 @@ nav {
     height: 100dvh;
     position: relative;
     text-align: center;
-    background: url(assets/images/Background\ Images/Certificate\ Background.jpg);
+    /* background-blend-mode: multiply; */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -357,18 +386,15 @@ nav {
 }
 
 #Home #intro h4 {
-    font-size: var(--size-base);
-}
-
-/*==========Home section intro span styles==========*/
-#Home #intro span {
     color: var(--clr-Primary);
+    font-size: var(--size-base);
 }
 
 /*==========Roles span styles==========*/
 #Roles span {
     display: block;
     font-size: var(--size-xs);
+    color: var(--clr-Primary);
 }
 
 /*==========Styles to create | symbol before every role==========*/
@@ -551,6 +577,8 @@ nav {
 #values a:hover {
     text-decoration: underline;
 }
+
+
 
 .Progress_Bar {
     margin-top: 15px;
@@ -1401,6 +1429,10 @@ footer .Content{
         font-size: var(--size-base);
     }
 
+    #socials li {
+        margin-left: 1.25em;
+    }
+
     .Right_Row p, .Right_Row span {
         font-size: var(--size-small);
         line-height: 1.5rem;
@@ -1742,14 +1774,14 @@ footer .Content{
         width: 50%;
     }
 
-    .Bar_Chart {
+    /* .Bar_Chart {
         display: flex;
         justify-content: space-between;
     }
 
     .Progress_Bar {
         width: 30rem;
-    }
+    } */
 
     .Left_Row {
         margin-right: 1.5rem;
@@ -1873,3 +1905,17 @@ footer .Content{
         bottom: 5px;
     }
 }
+
+/*==========Scrollbar styles==========*/
+body::-webkit-scrollbar {
+    width: 8px;
+  }
+   
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--clr-Secondary);
+    outline: 1px solid var(--clr-Secondary);
+  }

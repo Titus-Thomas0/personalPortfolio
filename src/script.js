@@ -297,3 +297,31 @@ navIndicator.addEventListener('click', e => {
 
     hideShowArrow(slides, prevButton, nextButton, targetIndex);
 });
+
+
+
+//==========JavaScript for remembering the theme user selected==========
+const colorThemes = document.querySelectorAll('[name="themePicker"]');
+
+//Store theme setting
+const storeTheme = function(theme) {
+    localStorage.setItem("theme", theme);
+}
+
+colorThemes.forEach((themeOption) => {
+    themeOption.addEventListener('click', () =>{
+        storeTheme(themeOption.value);
+    });
+});
+
+//apply saved theme
+const retrieveTheme = function() {
+    const activeTheme = localStorage.getItem("theme");
+    colorThemes.forEach((themeOption) => {
+        if (themeOption.value !== activeTheme) {
+            themeOption.value = activeTheme;
+        }
+    });
+}
+
+document.onload = retrieveTheme();
