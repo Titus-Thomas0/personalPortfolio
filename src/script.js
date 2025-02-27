@@ -66,6 +66,31 @@ window.addEventListener("scroll", updateActiveNav);
 
 
 
+//==========JavaScript for About me section scroll animation==========
+// const Scroller = document.querySelectorAll(".scroller");
+
+// if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+//     addAnimation();
+// }
+
+// function addAnimation () {
+//     Scroller.forEach((scroller) => {
+//         scroller.setAttribute("data-animated", true);
+
+//         const scrollerInner = scroller.querySelector('.scroller_inner');
+//         const scrollerContent = Array.from(scrollerInner.children);
+
+//         scrollerContent.forEach(item => {
+//             const duplicatedItem = item.cloneNode(true);
+
+//             duplicatedItem.setAttribute("aria-hidden", true);
+//             scrollerInner.appendChild(duplicatedItem);
+//         });
+//     });
+// }
+
+
+
 //==========JavaScript for Resume section scroll animation==========
 
 var items = document.querySelectorAll('.timeline-item');
