@@ -46,7 +46,7 @@ html {
     }
 
     #Home {
-        background: url(assets/images/Background\ Images/Certificate\ Background.jpg) var(--clr-BG);
+        background: url(assets/images/Background\ Images/BG1.jpg);
     }
 }
 
@@ -61,7 +61,7 @@ html {
     }
 
     #Home {
-        background: url(assets/images/Background\ Images/Main\ Background.jpg) var(--clr-BG);
+        background: url(assets/images/Background\ Images/Background.jpg), var(--clr-BG);
     }
 }
 
@@ -76,7 +76,7 @@ html {
     --clr-Comments: #444444;
 
     #Home {
-        background: url(assets/images/Background\ Images/Certificate\ Background.jpg) var(--clr-BG);
+        background: url(assets/images/Background\ Images/Background.jpg), var(--clr-BG);
     }
 }
 
@@ -91,7 +91,7 @@ html {
     --clr-Comments: #BBBBBB;
 
     #Home {
-        background: url(assets/images/Background\ Images/Main\ Background.jpg) var(--clr-BG);
+        background: url(assets/images/Background\ Images/Background.jpg), var(--clr-BG);
     }
 }
 
@@ -180,6 +180,34 @@ strong {
 
 ul {
     list-style: none;
+}
+
+/*==========Pre-Loader styles==========*/
+#preloader {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100dvh;
+    z-index: 100;
+    background-color: #000000;
+    flex-direction: column;
+}
+
+#percent {
+    color: var(--clr-Primary);
+}
+
+#bar {
+    width: 60%;
+    margin-top: 20px;
+}
+
+#barconfrm {
+    width: 1%;
+    padding: 1px 0px;
+    background-color: var(--clr-Secondary);
 }
 
 /*==========Content class styles==========*/
@@ -358,7 +386,7 @@ nav {
     height: 100dvh;
     position: relative;
     text-align: center;
-    /* background-blend-mode: multiply; */
+    /* background-blend-mode: normal; */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -474,8 +502,8 @@ nav {
 }
 
 #credly:hover {
-    background: #3b9e62;
-    box-shadow: 0px 0px 10px rgba(59, 158, 98, 5);
+    background: #fb8c00;
+    box-shadow: 0px 0px 10px rgba(251, 140, 0, 5);
 }
 
 #codedex:hover {
