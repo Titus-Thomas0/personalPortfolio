@@ -30,7 +30,7 @@ function greetings() {
     }
 }
 
-greetings();
+window.onload = greetings();
 
 
 
