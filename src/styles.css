@@ -182,6 +182,21 @@ ul {
     list-style: none;
 }
 
+/*==========Content class styles==========*/
+.Content {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+/*==========Page class styles==========*/
+.Page {
+    margin-top: 5rem;
+    padding-top: 1px;
+}
+
 /*==========Pre-Loader styles==========*/
 #preloader {
     position: fixed;
@@ -213,23 +228,8 @@ ul {
     transition: width 0.3s linear;
 }
 
-/*==========Content class styles==========*/
-.Content {
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-}
-
-/*==========Page class styles==========*/
-.Page {
-    margin-top: 5rem;
-    padding-top: 1px;
-}
-
 /*==========Nav elements styles==========*/
-header {
+header, #navigationBar {
     position: fixed;
     top: 0;
     right: 0;
@@ -237,9 +237,15 @@ header {
     left: 0;
     height: 3rem;
     width: 100%;
-    background: var(--clr-BG);
+    background: transparent;
     border-bottom: 2px solid var(--clr-BG-lite);
+    transition: background-color 0.3s ease;
     z-index: 90;
+}
+
+#navigationBar.scrolled {
+    background: var(--clr-BG);
+    backdrop-filter: blur(8px);
 }
 
 /*==========Nav elements styles==========*/
@@ -1667,7 +1673,7 @@ footer .Content{
     /*==========Navigation link styles==========*/
     .navList {
         text-decoration: none;
-        padding: 6px 1rem;
+        padding: 7px 1rem;
         transition: color 0.3s;
     }
 
@@ -1704,15 +1710,6 @@ footer .Content{
         display: block;
         width: 50%;
     }
-
-    /* .Bar_Chart {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .Progress_Bar {
-        width: 30rem;
-    } */
 
     .Left_Row {
         margin-right: 1.5rem;

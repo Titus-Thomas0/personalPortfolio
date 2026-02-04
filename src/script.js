@@ -43,6 +43,18 @@ menuIcon.onclick = () => {
     }
 }
 
+//==========JavaScript for changing navbar background on scroll==========
+const navbar = document.getElementById("navigationBar");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
+
 //==========JavaScript for creating typing effect on the welcome message==========
 let greetIndex = 0;
 let greetText = '<HELLO, WORLD!>';
