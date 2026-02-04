@@ -194,6 +194,7 @@ ul {
     z-index: 100;
     background-color: var(--clr-BG);
     flex-direction: column;
+    gap: 12px;
 }
 
 /*==========Pre-Loader track styles==========*/
