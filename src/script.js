@@ -1,5 +1,33 @@
 //Script to apply for Titus Thomas Personal Portfolio
 
+//==========JavaScript for Pre-loader to load==========
+const progress = document.getElementById("loaderProgress");
+let value = 0;
+
+// fake smooth progress until real load finishes
+const interval = setInterval(() => {
+  if (value < 90) {
+    value += 1;
+    progress.style.width = value + "%";
+  }
+}, 20);
+
+window.addEventListener("load", () => {
+  clearInterval(interval);
+
+  progress.style.width = "100%";
+
+  setTimeout(() => {
+    const preloader = document.getElementById("preloader");
+    preloader.style.opacity = "0";
+
+    setTimeout(() => {
+      preloader.style.display = "none";
+    }, 400);
+  }, 300);
+});
+
+
 //==========JavaScript for MenuIcon to Toggle the id to open==========
 const menuIcon = document.getElementById('menuIcon');
 const navItem = document.getElementById('navItem');
@@ -14,8 +42,6 @@ menuIcon.onclick = () => {
         navItem.style.maxHeight = '0px';
     }
 }
-
-
 
 //==========JavaScript for creating typing effect on the welcome message==========
 let greetIndex = 0;

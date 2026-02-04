@@ -184,30 +184,32 @@ ul {
 
 /*==========Pre-Loader styles==========*/
 #preloader {
-    position: absolute;
+    position: fixed;
+    inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100dvh;
     z-index: 100;
-    background-color: #000000;
+    background-color: var(--clr-BG);
     flex-direction: column;
 }
 
-#percent {
-    color: var(--clr-Primary);
-}
-
-#bar {
+/*==========Pre-Loader track styles==========*/
+.loader-track {
     width: 60%;
-    margin-top: 20px;
+    height: 4px;
+    background-color: var(--clr-BG-lite);
+    overflow: hidden;
 }
 
-#barconfrm {
-    width: 1%;
-    padding: 1px 0px;
+/*==========Pre-Loader progress styles==========*/
+.loader-progress {
+    width: 0%;
+    height: 100%;
     background-color: var(--clr-Secondary);
+    transition: width 0.3s linear;
 }
 
 /*==========Content class styles==========*/
@@ -236,7 +238,7 @@ header {
     width: 100%;
     background: var(--clr-BG);
     border-bottom: 2px solid var(--clr-BG-lite);
-    z-index: 999;
+    z-index: 90;
 }
 
 /*==========Nav elements styles==========*/
