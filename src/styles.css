@@ -43,10 +43,8 @@ html {
         --clr-base: #111111;
         --clr-BG-lite: #262626;
         --clr-Comments: #444444;
-    }
 
-    #Home {
-        background: url(assets/images/Background\ Images/BG1.jpg);
+        --home-bg: url(assets/images/Background\ Images/Dark\ BG.png);
     }
 }
 
@@ -58,10 +56,8 @@ html {
         --clr-base: #111111;
         --clr-BG-lite: #262626;
         --clr-Comments: #444444;
-    }
 
-    #Home {
-        background: url(assets/images/Background\ Images/Background.jpg), var(--clr-BG);
+        --home-bg: url(assets/images/Background\ Images/Light\ BG.png);
     }
 }
 
@@ -75,9 +71,7 @@ html {
     --clr-BG-lite: #262626;
     --clr-Comments: #444444;
 
-    #Home {
-        background: url(assets/images/Background\ Images/Background.jpg), var(--clr-BG);
-    }
+    --home-bg: url(assets/images/Background\ Images/Dark\ BG.png);
 }
 
 /*==========declaring light-mode color variables==========*/
@@ -90,9 +84,7 @@ html {
     --clr-BG-lite: #D9D9D9;
     --clr-Comments: #BBBBBB;
 
-    #Home {
-        background: url(assets/images/Background\ Images/Background.jpg), var(--clr-BG);
-    }
+    --home-bg: url(assets/images/Background\ Images/Light\ BG.png);
 }
 
 /*==========Body elements styles==========*/
@@ -395,7 +387,10 @@ nav {
     height: 100dvh;
     position: relative;
     text-align: center;
-    /* background-blend-mode: normal; */
+
+    background-color: var(--clr-BG);
+    background-image: var(--home-bg);
+    background-blend-mode: normal;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -504,7 +499,7 @@ nav {
     box-shadow: 0px 0px 10px rgba(68, 68, 68, 5);
 }
 
-#credly, #codedex{
+#credly, #leetcode{
     background: #000000;
     border-radius: 50px;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
@@ -515,8 +510,8 @@ nav {
     box-shadow: 0px 0px 10px rgba(251, 140, 0, 5);
 }
 
-#codedex:hover {
-    background: #ffee39;
+#leetcode:hover {
+    background: #ffff39;
     box-shadow: 0px 0px 10px rgba(255, 238, 57, 5);
 }
 
