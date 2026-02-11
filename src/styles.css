@@ -589,7 +589,7 @@ nav {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 100%;
+    object-position: 80%;
 }
 
 .quote {
@@ -651,11 +651,32 @@ nav {
     margin-bottom: 2.5rem;
 }
 
-.Button a {
-    display: inline-block;
-    position: relative;
+.Hire_me a {
+    display: block;
+    background-color: var(--clr-Secondary);
+    color: var(--clr-Primary);
+    font-size: var(--size-2xl);
+    letter-spacing: 0.3rem;
+    height: 5rem;
+    line-height: 4.5rem;
+    width: 100%;
+    padding: 0rem 3rem;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px solid var(--clr-Secondary);
+    cursor: pointer;
+}
+
+.Hire_me a:hover {
     background: transparent;
-    text-decoration: none;
+    color: var(--clr-Secondary);
+    font-weight: bold;
+}
+
+.Resume_Download a {
+    display: block;
+    background: transparent;
     color: var(--clr-Secondary);
     font-size: var(--size-2xl);
     letter-spacing: 0.3rem;
@@ -670,7 +691,7 @@ nav {
     cursor: pointer;
 }
 
-.Button a:hover {
+.Resume_Download a:hover {
     background-color: var(--clr-Secondary);
     color: var(--clr-Primary);
     font-weight: bold;
@@ -1417,6 +1438,11 @@ footer .Content{
         justify-content: center;
     }
 
+    .call-in-action {
+        display: flex;
+        justify-content:space-evenly;
+    }
+
     .text-box {
         padding: 1.5rem 1.5rem;
     }
@@ -1682,10 +1708,6 @@ footer .Content{
     .Left_Row p, .Left_Row span {
         font-size: var(--size-lg);
         line-height: 1.8rem;
-    }
-
-    .Button a {
-        width: 50%;
     }
 
     .text-box {
