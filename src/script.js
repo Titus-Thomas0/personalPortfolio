@@ -129,62 +129,6 @@ window.onload = displayItems;
 window.onresize = displayItems;
 window.onscroll = displayItems;
 
-
-
-//==========JavaScript for showing project details in model==========
-
-//==========JavaScript for showing project details in model of #Project 1==========
-
-const seeMore1 = document.getElementById('seeMore1');
-const project1Model = document.getElementById("Project1-Model");
-const modalWrapper1 = document.getElementById("modalWrapper1")
-const closeButton1 = document.getElementById("closeButton1");
-
-seeMore1.onclick = () => {
-    project1Model.showModal();
-    document.body.style.overflowY = 'hidden';
-}
-
-closeButton1.onclick = () => {
-    project1Model.close();
-    document.body.style.overflowY = 'auto';
-}
-
-project1Model.addEventListener("click", (e) => {
-    if(!modalWrapper1.contains(e.target)) {
-        project1Model.close();
-        document.body.style.overflowY = 'auto';
-    }
-});
-
-
-//==========JavaScript for showing project details in model of #Project 2==========
-
-const seeMore2 = document.getElementById('seeMore2');
-const project2Model = document.getElementById("Project2-Model");
-const modalWrapper2 = document.getElementById("modalWrapper2")
-const closeButton2 = document.getElementById('closeButton2');
-
-
-seeMore2.onclick = () => {
-    project2Model.showModal();
-    document.body.style.overflowY = 'hidden';
-}
-
-closeButton2.onclick = () => {
-    project2Model.close();
-    document.body.style.overflowY = 'auto';
-}
-
-project2Model.addEventListener("click", (e) => {
-    if(!modalWrapper2.contains(e.target)) {
-        project2Model.close();
-        document.body.style.overflowY = 'auto';
-    }
-});
-
-
-
 //==========JavaScript for updating carousal in certificate section==========
 
 const tracker = document.querySelector('.Carousal-Tracker');
