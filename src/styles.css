@@ -643,60 +643,6 @@ nav {
     font-size: var(--size-4xl);
 }
 
-.Button {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-}
-
-.Hire_me a {
-    display: block;
-    background-color: var(--clr-Secondary);
-    color: var(--clr-Primary);
-    font-size: var(--size-2xl);
-    letter-spacing: 0.3rem;
-    height: 5rem;
-    line-height: 4.5rem;
-    width: 100%;
-    padding: 0rem 3rem;
-    justify-content: center;
-    text-align: center;
-    border-radius: 10px;
-    border: 3px solid var(--clr-Secondary);
-    cursor: pointer;
-}
-
-.Hire_me a:hover {
-    background: transparent;
-    color: var(--clr-Secondary);
-    font-weight: bold;
-}
-
-.Resume_Download a {
-    display: block;
-    background: transparent;
-    color: var(--clr-Secondary);
-    font-size: var(--size-2xl);
-    letter-spacing: 0.3rem;
-    height: 5rem;
-    line-height: 4.5rem;
-    width: 100%;
-    padding: 0rem 3rem;
-    justify-content: center;
-    text-align: center;
-    border-radius: 10px;
-    border: 3px solid var(--clr-Secondary);
-    cursor: pointer;
-}
-
-.Resume_Download a:hover {
-    background-color: var(--clr-Secondary);
-    color: var(--clr-Primary);
-    font-weight: bold;
-}
-
 /*==========Resume Section==========*/
 .Experience {
     display: block;
@@ -845,127 +791,126 @@ nav {
     transition: all 1.5s;
 }
 
-/*==========Projects Section==========*/
-.Project-List {
+.Button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.Hire_me a {
     display: block;
-}
-
-.Project-Card {
-    position: relative;
-    margin: 0.5rem 0.5rem 1.5rem 0.5rem;
+    background-color: var(--clr-Secondary);
+    color: var(--clr-Primary);
+    font-size: var(--size-2xl);
+    letter-spacing: 0.3rem;
+    height: 5rem;
+    line-height: 4.5rem;
+    width: 100%;
+    padding: 0rem 3rem;
+    justify-content: center;
+    text-align: center;
     border-radius: 10px;
-    overflow: hidden;
-}
-
-.Project-Card img {
-    background: var(--clr-Comments);
-}
-
-.Project-Details {
-    padding: 0.5rem 1.5rem;
-    background: #FFFFFF;
-}
-
-.Project-Details::before {
-    content: '';
-    height: 0;
-    width: 0;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 264px;
-    z-index: 10;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 15px solid var(--clr-Primary);
-}
-
-.Project-Details h3 {
-    line-height: normal;
-}
-
-.Project-Details small {
-    display: inline-block;
-    line-height: normal;
-    margin-bottom: 0.5rem;
-    color:var(--clr-BG-lite);
-}
-
-.Project-Details p {
-    color: var(--clr-BG);
-    line-height: normal;
-    margin-bottom: 1rem;
-}
-
-.Project-Details p a {
-    color: var(--clr-BG-lite);
-    font-weight: bold;
-    line-height: normal;
+    border: 3px solid var(--clr-Secondary);
     cursor: pointer;
 }
 
-.Project-Details p a:hover {
-    color: var(--clr-Secondary);
-}
-
-.Project-Details span {
-    text-align: center;
-    padding: 0.25rem 0.5rem;
-    margin-right: 10px;
-    background: var(--clr-Secondary);
-    color: var(--clr-Primary);
-    border-radius: 5px;
-}
-
-.Project-model {
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 5px solid var(--clr-Secondary);
-    background: var(--clr-BG);
-}
-
-.Project-model::backdrop {
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.Project-model h3 {
-    padding: 0.5rem 1rem;
-    color: var(--clr-Secondary);
-    letter-spacing: 0.23rem;
-    line-height: normal;
-}
-
-.Project-model p {
-    padding: 0.5rem 1rem;
-    color: #FFFFFF;
-    line-height: 1.5rem;
-}
-
-.Project-model p span {
-    padding: 20px;
-    background: none;
-    line-height: 1.5rem;
-}
-
-.Project-model .closeButton {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    font-size: larger;
-    text-align: center;
-    letter-spacing: 5px;
+.Hire_me a:hover {
     background: transparent;
     color: var(--clr-Secondary);
-    border-top: 3px solid var(--clr-Secondary);
+    font-weight: bold;
+}
+
+.Resume_Download a {
+    display: block;
+    background: transparent;
+    color: var(--clr-Secondary);
+    font-size: var(--size-2xl);
+    letter-spacing: 0.3rem;
+    height: 5rem;
+    line-height: 4.5rem;
+    width: 100%;
+    padding: 0rem 3rem;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px solid var(--clr-Secondary);
     cursor: pointer;
 }
 
-.Project-model .closeButton:hover {
-    background: var(--clr-Secondary);
+.Resume_Download a:hover {
+    background-color: var(--clr-Secondary);
     color: var(--clr-Primary);
-    font-weight: bolder;
+    font-weight: bold;
+}
+
+/*==========Projects Section==========*/
+.project-lists {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.project-card {
+    overflow: hidden;
+    background: var(--clr-Comments);
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-BG);
+}
+
+.project-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin: 0.5rem;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    background-color: var(--clr-BG-lite);
+    border-radius: 0.75rem;
+    object-fit: contain;
+    display: block;
+}
+
+.description {
+    color: var(--clr-Primary);
+    padding: 1.25rem;
+    position: relative;
+}
+
+.description h3 {
+    margin: 0 0 0.25rem 0;
+    line-height: 0.5rem;
+}
+
+.description small {
+    opacity: 0.7;
+}
+
+.description i {
+    position: absolute;
+    right: 1.25rem;
+    top: 1.25rem;
+    font-size: var(--size-4xl);
+    opacity: 0.5;
+    transition: transform 0.3s ease;
+}
+
+@media (hover: hover) {
+    .project-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    }
+
+    .project-card:hover .description i {
+        color: var(--clr-Secondary);
+        font-size: var(--size-5xl);
+        transform: translateX(5px);
+    }
 }
 
 /*==========Certificates Section==========*/
@@ -1372,10 +1317,6 @@ footer .Content{
         justify-content: space-between;
     }
 
-    .Project-Details::before {
-        top: 419px;
-    }
-
     .carousalText {
         bottom: -35px;
     }
@@ -1445,27 +1386,6 @@ footer .Content{
 
     .text-box {
         padding: 1.5rem 1.5rem;
-    }
-
-    .Project-Card {
-        display: flex;
-    }
-
-    .Project-Card img {
-        width: 200px;
-    }
-
-    .Project-Details::before {
-        top: 50%;
-        transform: translateY(-50%);
-        border-top: 15px solid transparent;
-        border-bottom: 15px solid transparent;
-        border-right: 15px solid var(--clr-Primary);
-        left: 171px;
-    }
-
-    .Project-model {
-        width: 80%;
     }
 
     .carousalText {
@@ -1599,6 +1519,10 @@ footer .Content{
         right: -14px;
     }
 
+    .project-lists {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .Carousal-Image {
         height: 70dvh;
         width: 80%;
@@ -1714,8 +1638,8 @@ footer .Content{
         padding: 1.5rem 1.5rem;
     }
 
-    .Project-model {
-        width: 50%;
+    .project-lists {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .carousalText {
