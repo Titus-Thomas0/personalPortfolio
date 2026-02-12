@@ -951,8 +951,12 @@ nav {
 
 .Carousal-Image {
     width: 100%;
-    background: var(--clr-BG-lite);
+    background: var(--clr-BG);
     object-fit: fill;
+}
+
+.vertical {
+    object-fit: contain;
 }
 
 .carousalText {
@@ -1002,19 +1006,20 @@ nav {
 }
 
 .slideArrows {
-    font-size: 50px;
-    color: rgba(0, 0, 0, 0.5);
+    font-size: var(--size-5xl);
+    color: var(--clr-Comments);
 }
 
 .slideArrows:hover {
-    color: var(--clr-Primary);
+    font-size: var(--size-6xl);
+    color: var(--clr-Secondary);
 }
 
 .carousalNav {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -45px;
+    /* bottom: -45px; */ /* <--Remove this when less indicators */
 }
 
 .Carousel-Indicator {
@@ -1023,13 +1028,13 @@ nav {
     height: 5px;
     width: 40px;
     display: inline-flex;
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--clr-Comments);
     margin: 0 0.125rem;
     cursor: pointer;
 }
 
 .Carousel-Indicator:hover {
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--clr-Secondary);
     border: transparent;
 }
 
