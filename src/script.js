@@ -278,7 +278,143 @@ navIndicator.addEventListener('click', e => {
     hideShowArrow(slides, prevButton, nextButton, targetIndex);
 });
 
+// =========JavaScript for Contact form validation and submission using EmailJS==========
 
+document.addEventListener("DOMContentLoaded", function () {
+
+    emailjs.init("snZpLBbHLa5X7hN5M"); // Replace with your EmailJS public key
+
+    const form = document.getElementById("connectForm");
+    const submitBtn = document.getElementById("submitBtn");
+    const status = document.getElementById("formStatus");
+    const successModel = document.getElementById("successModel");
+    const failureModel = document.getElementById("failureModel");
+
+    const inputs = ["connectName","connectEmail","connectSubject","connectMessage"];
+
+    let lastSubmitTime = 0; // rate limit
+
+    /* =========================
+       LIVE VALIDATION
+    ==========================*/
+    inputs.forEach(id => {
+        document.getElementById(id).addEventListener("input", () => {
+            validateField(id);
+        });
+    });
+
+    function validateField(id) {
+        const field = document.getElementById(id);
+        const value = field.value.trim();
+        const error = field.parentElement.querySelector(".error");
+
+        if (id === "connectName" && value.length < 2) {
+            error.textContent = "Minimum 2 characters required";
+            return false;
+        }
+
+        if (id === "connectEmail" && !validateEmail(value)) {
+            error.textContent = "Enter a valid email";
+            return false;
+        }
+
+        if (id === "connectSubject" && value.length < 2) {
+            error.textContent = "Subject too short";
+            return false;
+        }
+
+        if (id === "connectMessage" && value.length < 10) {
+            error.textContent = "Message must be 10+ characters";
+            return false;
+        }
+
+        error.textContent = "";
+        return true;
+    }
+
+    function validateEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    /* =========================
+       FORM SUBMIT
+    ==========================*/
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        /* Honeypot Protection */
+        if (document.getElementById("company").value !== "") {
+            return; // bot detected
+        }
+
+        /* Rate Limit: 30 sec */
+        const now = Date.now();
+        if (now - lastSubmitTime < 30000) {
+            status.textContent = "⏳ Please wait before sending again.";
+            return;
+        }
+
+        let isValid = true;
+        inputs.forEach(id => {
+            if (!validateField(id)) isValid = false;
+        });
+
+        if (!isValid) return;
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+
+        const templateParams = {
+            name: connectName.value,
+            email: connectEmail.value,
+            subject: connectSubject.value,
+            message: connectMessage.value
+        };
+
+        emailjs.send("service_sg9xzaf", "template_s2b005n", templateParams)
+            .then(() => {
+
+                lastSubmitTime = Date.now();
+
+                form.reset();
+                showSuccessModel();
+
+                status.textContent = "";
+
+            })
+            .catch((error) => {
+                console.error("EmailJS Error:", error);
+                showFailureModel();
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = "SEND MAIL";
+            });
+    });
+
+    /* =========================
+       SUCCESS MODEL
+    ==========================*/
+    function showSuccessModel() {
+        successModel.classList.add("active");
+
+        setTimeout(() => {
+            successModel.classList.remove("active");
+        }, 5000); // auto-hide after 5s
+    }
+
+    /* =========================
+       FAILURE MODEL
+    ==========================*/
+    function showFailureModel() {
+        failureModel.classList.add("active");
+
+        setTimeout(() => {
+            failureModel.classList.remove("active");
+        }, 5000); // auto-hide after 5s
+    }
+
+});
 
 //==========JavaScript for remembering the theme user selected==========
 const colorThemes = document.querySelectorAll('[name="themePicker"]');

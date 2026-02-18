@@ -34,8 +34,23 @@ html {
     --size-10xl: 10rem;
 }
 
-
+@media (prefers-color-scheme: light) {
+  :root {
+    
+    --home-bg: url(assets/images/Background\ Images/Light\ BG.png);
+  }
+}
 @media (prefers-color-scheme: dark) {
+  :root {
+    
+
+    --home-bg: url(assets/images/Background\ Images/Dark\ BG.png);
+  }
+}
+
+
+
+/* @media (prefers-color-scheme: dark) {
     :root {
         --clr-BG: #000000;
         --clr-Primary: #FFFFFF;
@@ -59,10 +74,23 @@ html {
 
         --home-bg: url(assets/images/Background\ Images/Light\ BG.png);
     }
-}
+} */
 
 /*==========declaring dark-mode color variables==========*/
+
+:root:has(#theme [value="Light"]:checked) {
+  
+
+  --home-bg: url(assets/images/Background\ Images/Light\ BG.png);
+}
+
 :root:has(#theme [value="Dark"]:checked) {
+  
+
+  --home-bg: url(assets/images/Background\ Images/Dark\ BG.png);
+}
+
+/* :root:has(#theme [value="Dark"]:checked) {
     color-scheme: dark;
     --clr-BG: #000000;
     --clr-Primary: #FFFFFF;
@@ -72,10 +100,10 @@ html {
     --clr-Comments: #444444;
 
     --home-bg: url(assets/images/Background\ Images/Dark\ BG.png);
-}
+} */
 
 /*==========declaring light-mode color variables==========*/
-:root:has(#theme [value="Light"]:checked) {
+/* :root:has(#theme [value="Light"]:checked) {
     color-scheme: light;
     --clr-BG: #FFFFFF;
     --clr-Primary: #000000;
@@ -85,7 +113,7 @@ html {
     --clr-Comments: #BBBBBB;
 
     --home-bg: url(assets/images/Background\ Images/Light\ BG.png);
-}
+} */
 
 /*==========Body elements styles==========*/
 body {
@@ -1068,7 +1096,7 @@ fieldset {
 
 .form-field {
     position: relative;
-    margin: 20px 0;
+    margin: 35px 0;
 }
 
 .form-field label {
@@ -1083,7 +1111,7 @@ fieldset {
 }
 
 .form-field .connectMessage-label {
-    top: 5%;
+    top: 10%;
 }
 
 .form-field input {
@@ -1095,6 +1123,7 @@ fieldset {
     border: 2px solid var(--clr-Comments);
     outline: none;
     border-radius: 5px;
+    font-size: var(--size-base);
 }
 
 .form-field input:hover {
@@ -1110,10 +1139,20 @@ fieldset {
     border: 2px solid var(--clr-Comments);
     outline: none;
     border-radius: 5px;
+    font-size: var(--size-base);
 }
 
 .form-field textarea:hover {
     border: 2px solid var(--clr-Secondary);
+}
+
+.error {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    color: var(--clr-Secondary);
+    font-size: var(--size-xs);
+    margin-top: 5px;
 }
 
 .form-field button {
@@ -1134,9 +1173,10 @@ fieldset {
 .form-field input:not(:placeholder-shown)~label,
 .form-field textarea:not(:placeholder-shown)~label {
     top: 0;
-    font-family: 12px;
+    font-size: var(--size-xs);
     background: var(--clr-BG);
     color: var(--clr-Comments);
+    line-height: normal;
 }
 
 .form-field input:focus,
@@ -1151,9 +1191,10 @@ fieldset {
 .form-field textarea:focus~label,
 .form-field textarea:valid~label {
     top: 0;
-    font-family: 12px;
+    font-size: var(--size-xs);
     background: var(--clr-BG);
     color: var(--clr-Secondary);
+    line-height: normal;
 }
 
 .form-field button:hover {
@@ -1161,6 +1202,74 @@ fieldset {
     border: 2px solid var(--clr-Secondary);
     color: var(--clr-Primary);
     font-weight: bolder;
+}
+
+.form-status {
+    margin-top: 10px;
+    color: var(--clr-Primary);
+    font-size: var(--size-base);
+    text-align: center;
+}
+
+/* Success Model */
+.success-model, .failure-model {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);  /* Transparent dark overlay */
+    backdrop-filter: blur(8px);  /* Glass blur effect */
+    -webkit-backdrop-filter: blur(8px);  /* Glass blur effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease;
+    z-index: 100;
+}
+
+.success-model.active, .failure-model.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.success-box, .failure-box {
+    background: rgba(20, 20, 20, 0.85);
+    color: #fff;
+
+    padding: 2.5rem;
+    width: 90%;
+    max-width: 400px;
+
+    border-radius: 16px;
+
+    /* Glass border */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    /* Soft shadow */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+
+    text-align: center;
+
+    transform: translateY(30px);
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+/* Animation */
+.success-model.active .success-box,
+.failure-model.active .failure-box {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Success style */
+.success-model .success-box {
+    border-left: 4px solid #22c55e;
+}
+
+/* Failure style */
+.failure-model .failure-box {
+    border-left: 4px solid #ef4444;
 }
 
 /*==========Footer Section==========*/
